@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+@font-face {
+    font-family: 'ulsanjunggu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KoPubDotumMedium';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        #header {
+            background-color: rgb(59, 66, 66);
+            height: 25px;
+            color: white;
+            font-size: small;
+            line-height: 22px;
+            cursor: pointer;
+        }
+
+        #header {text-align: center;}
+
+        #nav{
+            
+            margin-left: 0.1px;
+            height: 70px;
+        }
+        #nav:hover{
+            background-color: white;              
+            transition: background 0.5s ease-in-out;
+
+        }
+        #nav{
+            position: sticky;
+            top: 0;  
+            width: 100%;          
+        }
+        #os , #product, #dada, #present, #brand, #login,#korean{
+            background-color:transparent;
+            border: 0;
+            outline: 0;
+            color: white;
+            cursor: pointer;
+        }
+       
+        #product, #dada, #present, #brand,#korean{
+            font-size: 18px;
+            padding-left: 25px;
+            font-weight: 500;
+        }
+
+        #os{
+            font-size: 35px;
+            padding-left: 70px;
+            font-weight: 700;
+            padding-top: 10px;
+            font-family: 'ulsanjunggu';
+        }
+         
+        #login{
+            font-size: 18px;   
+            padding-left: 800px;         
+        }
+
+        .outer{
+            width: 100%;
+            height: 520px;
+            margin: 0 auto;
+            overflow-x: hidden;          
+}
+
+        #cover{
+            width: 100%;
+            height: 460px;     
+            background-color: rgb(255, 255, 255);       
+        }
+
+
+        .inner-list {
+        display: flex;
+        transition: .3s ease-out;
+        height: 100%;
+        }
+
+        .button-list {
+        text-align: center;
+        }
+        #os{
+            background-color: none;
+        }
+        #notion{
+            background-color: rgb(240, 240, 240);
+            margin-left: 200px;
+            padding-left: 20px;
+            height: 35px;
+            width: 1100px;
+            border-radius: 5px;
+        }
+        #notion1{
+            color: darkolivegreen;
+            cursor: pointer;
+        }
+        #notion2{
+            padding-left: 770px;
+            font-size: 23px;
+            color: darkgrey;
+            cursor: pointer;
+        }
+        #today{
+            margin-left: 190px;
+            color: rgb(29, 29, 29);
+            font-size: 30px;
+            font-family: 'GmarketSansMedium';
+            font-weight: 600;
+        }
+        #summer{
+            margin-left: 25px;
+            width: 120px;            
+        }
+        #summer, #weekend{
+            margin-left: 8px;
+            font-family: 'GmarketSansMedium';
+            font-size: 15px;
+            border-radius: 20px;
+            border: 0;
+            outline: 0;
+            height: 35px;
+            cursor: pointer;
+        }
+        #weekend{
+            width: 140px;
+        }
+        
+        #products{
+            margin-left: 200px;
+        }
+        #new_product{
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            background-color: rgb(173, 155, 106);
+            text-align: center;
+            width: 55px;
+            height: 19px;
+        }      
+        #more_product{
+            margin-left: 525px;
+            margin-top: 60px;
+            border: 2px solid rgb(211, 211, 211);
+            border-radius: 5px;
+            background-color: white;
+            height: 45px;
+            width: 180px;
+            cursor: pointer;
+        }
+        #more_product_text1{
+            font-family: 'GmarketSansMedium';
+            color: rgb(104, 104, 104);
+            font-size: 13px;
+        }
+        #more_product_text2{
+            color: rgb(104, 104, 104);
+        }
+        #gray_box{
+            background-color: rgb(240, 240, 240);
+            width: 100%;
+             height: 600px;
+             padding-top: 60px;
+             margin-top: 50px;
+        }
+        #gray1{
+            cursor: pointer;
+        }
+        #gray1_2{
+            height: 260px;
+            margin-bottom: 290px;
+            margin-left: 20px;
+        }
+        #sub{
+            margin-left: 200px;
+            margin-top: 70px;
+        }
+        #sub_text1{
+            font-family: 'KoPubDotumMedium';
+            font-size: 30px;
+        }
+        #sub_text2{
+            font-family: 'GmarketSansMedium';
+            font-size: 15px;
+            color: rgb(143, 153, 123);
+        }
+        #sub_img{
+            margin-top: 25px;
+        }
+        #sub_button{
+            margin-left: 450px;
+            margin-top: 40px;
+            border: 2px solid rgb(211, 211, 211);
+            border-radius: 5px;
+            background-color: white;
+            height: 45px;
+            width: 250px;
+            cursor: pointer;
+        }
+        #sub_button1{
+            font-size: 14px;
+            color: rgb(54, 54, 54);
+        }
+        #sub_button2{
+            font-size: 14px;
+            color: rgb(112, 112, 112);
+        }
+        #record{
+            margin-left: 200px;
+            margin-top: 150px;
+        }
+        #record_text1{
+            font-family: 'KoPubDotumMedium';
+            font-size: 30px;
+        }
+        #record_text2{
+            font-family: 'GmarketSansMedium';
+            font-size: 15px;
+            color: rgb(143, 153, 123);
+        }
+        #record_img{
+            margin-top: 50px;
+
+        }
+        #record1, #record2, #record3{
+            display: inline-block;   
+        }
+        #record_bt{
+            margin-left: 450px;
+            margin-top: 40px;
+            border: 2px solid rgb(211, 211, 211);
+            border-radius: 5px;
+            background-color: white;
+            height: 45px;
+            width: 250px;
+            cursor: pointer;
+        }
+        #record_bt1{
+            font-size: 14px;
+            color: rgb(54, 54, 54);
+        }
+        #record_bt2{
+            font-size: 14px;
+            color: rgb(112, 112, 112);
+        }
+        #jeju{
+            position: relative;            
+            margin-top: 100px;
+            margin-left: 20px;
+            text-align: center;
+        }
+        #jeju_text{
+            position: absolute;
+            bottom: 90px;
+            left: 620px;
+            font-family: 'KoPubDotumMedium';
+            color: white;
+            font-size: 30px;
+        }
+        #jeju_bt{
+            position: absolute;
+            border: 1px solid rgb(167, 167, 167);
+            border-radius: 3px;
+            background-color: transparent;
+            height: 28px;
+            width: 100px;
+            cursor: pointer;
+            left: 680px;
+            bottom: 45px;
+            color: white;
+            text-align: center;
+        }
+        #jeju_bt1{
+            color: rgb(167, 167, 167);
+        }
+        #last_gray{
+            background-color: rgb(99, 99, 99);
+            height: 55px;
+            width: 100%;
+            margin-top: 55px;
+            padding-left: 1240px;
+            padding-top: 12px;
+        }
+        #lg_bt1{  /*?????????로그인 버튼 자기혼자 내려가짐*/
+            border: 0;
+            text-align: center;
+            height: 40px;
+            width: 100px;
+            background-color: rgb(66, 66, 66);
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #lg_bt2{
+            border: 0;
+            background-color: rgb(66, 66, 66);
+            border-radius: 20px;
+            height: 40px;
+            width: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        #mun{
+            height: 160px;
+            width: 100%;
+            background-color: rgb(247, 247, 247);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <p >지금 회원가입하면 3천 원 할인 쿠폰 증정</p>
+    </div>
+
+    <div id="main">
+        <div id="nav" style="position: relative; z-index: 2;" onmouseover=paragraph_onmouseover() onmouseout=paragraph_onmouseout()>
+            <button id="os">오설록</button>
+            <button id="product" onmouseover=paragraph_onmouseover1() onmouseout=paragraph_onmouseout1()>제품</button>
+            <button id="present">선물추첨</button>
+            <button id="dada" >다다일삼</button>
+            <button id="brand">브랜드</button>
+            <button id="login">로그인</button>
+            <button id="korean">korean</button>
+        </div>
+        <div class="outer" style="position: relative; top: -70px; z-index: 1;"> <!--메인 화면 사진들-->
+            <div class="inner-list">
+              <div class="inner">
+                <img src="main1.png" style="height: 515px;">
+              </div>
+              <div class="inner">
+                <img src="main2.png" style="height: 515px;">
+              </div>
+              <div class="inner">
+                <img src="main3.png" style="height: 515px;">
+              </div>
+            </div>
+          </div>
+          
+          <div id="cover" style="position: relative; top: -530px; z-index: 3;"></div>
+
+          <div class="button-list" style="position: relative; top: -600px; z-index: 3;">
+            <button class="button-left">← Left</button>
+            <button class="button-right">Right →</button>
+          </div>
+    </div>
+
+    <div id="notion" style="position: relative; top: -500px;"> <!--공지사항-->
+        <span id="notion1">공지사항</span> <span>'숨겨진 티 이벤트' 당첨자 발표</span>
+        <span id="notion2">></span>
+    </div>
+
+    <div id="recommend" style="position: relative; top: -460px;">
+        <div>
+            <span id="today">오늘은 어떤 차를 마셔볼까요?</span>
+            <button id="summer" onclick="change1()">여름맞이 선물</button>
+            <button id="weekend" onclick="change2()">이번 주 인기 제품</button>
+        </div>
+    </div>
+
+    <div id="recommend_product" style="position: relative; top: -410px;">
+        <div id="products">
+            <div id="product1">
+                <div>
+                <img src="product1.png">
+                </div><br>
+                <div>콤부차 피치동백&제주영귤 4입</div><br>
+                <div>16,000원</div><br><br>
+                <div id="new_product">신상품</div>
+        </div>
+        <div>
+            <button id="more_product">
+                <span id="more_product_text1">더 보기</span>
+                <span id="more_product_text2">&nbsp;&nbsp;></span>
+            </button>
+        </div>
+    </div>
+
+    <div id="gray_box">
+        <div id="gray1">
+            <img src="gray1.jpg" style="height: 550px; margin-left: 200px;">
+            <img id="gray1_2" src="gray2.png">
+        </div>
+        <div style="position: relative; top:-265px; left:805px">
+            <img src="gray3.jpg" style="height: 260px; cursor: pointer;">
+        </div>
+    </div>
+
+    <div id="sub">
+        <div id="sub_text">
+            <span id="sub_text1">다다일상 구독</span><br><br>
+            <span id="sub_text2">하루 한 번, 나를 만나는 시간을 가져보세요.</span>
+        </div>
+        <div>
+            <div id="sub_img">
+                <div>
+                    <img src="sub1.jpg">
+                    <img src="sub2.jpg" style="margin-left: 12px;">
+                    <img src="sub3.jpg" style="margin-left: 12px;">
+                </div>
+            </div>
+            <div>
+                <button id="sub_button">
+                    <span id="sub_button1">다다일상 자세히 보기</span>
+                    <span id="sub_button2">&nbsp;></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="record">
+        <div id="record_text">
+            <span id="record_text1">다다일상 기록</span><br><br>
+            <span id="record_text2">차를 통해 달라지는 일상을 만나보세요.</span>
+        </div>
+        <div id="record_img">
+            <div id="record1">
+                <img src="record1.jpg" style="height: 220px; width:380px;">
+            </div>
+            <div id="record2">
+                <img src="record2.jpg" style="height: 220px; width:380px;">
+            </div>
+            <div id="record3">
+                <img src="record3.jpg" style="height: 220px; width:380px;">
+            </div>
+        </div>
+        <button id="record_bt">
+            <span id="record_bt1">차와 함께하는 삶 더 보기</span>
+            <span id="record_bt2">&nbsp;></span>
+        </button>
+    </div>
+
+    <div id="jeju">
+        <img src="jeju.jpg">
+        <span id="jeju_text">제주 티뮤지엄 티스톤</span>
+        <button id="jeju_bt">
+            <span>예약하기</span>
+            <span id="jeju_bt1">></span>
+        </button>
+    </div>
+
+    <div id="last_gray">
+        <button id="lg_bt1">로그인</button>
+        <button id="lg_bt2"></button>
+        <button id="lg_bt2"></button>
+    </div>
+
+    <div id="mun">
+
+    </div>
+    <script>
+        cover.style.visibility = "hidden";
+
+         function paragraph_onmouseover(){
+         os.style.color="darkslategray";
+         product.style.color="dimgray";
+         dada.style.color="dimgray";
+         present.style.color="dimgray";
+         login.style.color="dimgray";
+         korean.style.color="dimgray";
+         brand.style.color="dimgray";
+ }
+    function paragraph_onmouseout(){
+         os.style.color="white";
+         product.style.color="white";
+         dada.style.color="white";
+         present.style.color="white";
+         login.style.color="white";
+         korean.style.color="white";
+         brand.style.color="white";
+ }
+
+    function paragraph_onmouseover1()
+    {          
+        cover.style.visibility = "visible"; 
+         
+    }
+
+    function paragraph_onmouseout1(){
+        cover.style.visibility = "hidden";
+    }
+
+    function change1()
+        {
+            summer.style.background="olivedrab";
+            summer.style.color= "white";
+            weekend.style.background="rgb(235, 235, 235)";
+            weekend.style.color= "dimgray";
+        }
+
+    function change2()
+        {
+            weekend.style.background="olivedrab";
+            weekend.style.color= "white";
+            summer.style.background="rgb(235, 235, 235)";
+            summer.style.color= "dimgray";
+        }
+
+     /*
+  div사이즈 동적으로 구하기
+*/
+
+const outer = document.querySelector('.outer');
+const innerList = document.querySelector('.inner-list');
+const inners = document.querySelectorAll('.inner');
+let currentIndex = 0; // 현재 슬라이드 화면 인덱스
+
+inners.forEach((inner) => {
+  inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+})
+
+innerList.style.width = `${outer.clientWidth * inners.length}px`; // innerList의 width를 inner의 width * inner의 개수로 만들기
+
+/*
+  버튼에 이벤트 등록하기
+*/
+const buttonLeft = document.querySelector('.button-left');
+const buttonRight = document.querySelector('.button-right');
+
+buttonLeft.addEventListener('click', () => {
+  currentIndex--;
+  currentIndex = currentIndex < 0 ? 0 : currentIndex; // index값이 0보다 작아질 경우 0으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+  clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+
+buttonRight.addEventListener('click', () => {
+  currentIndex++;
+  currentIndex = currentIndex >= inners.length ? inners.length - 1 : currentIndex; // index값이 inner의 총 개수보다 많아질 경우 마지막 인덱스값으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+  clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+
+/*
+  주기적으로 화면 넘기기
+*/
+const getInterval = () => {
+  return setInterval(() => {
+    currentIndex++;
+    currentIndex = currentIndex >= inners.length ? 0 : currentIndex;
+    innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`;
+  }, 3000);
+}
+
+let interval = getInterval(); // interval 등록*/
+    </script>
+</body>
+</html>
