@@ -20,10 +20,14 @@ css 입니다! gray_box 안에 display: flex 빼야하는데 깜빡했습니다
 두 개 사진 들은 div(gray1_2)은 display : flex로 하되 flex-direction: column를 써서 아래로 정렬되게 했습니다!
 두 div를 갖고 있는 div(grays)는 display : flex 만 했는데 이유가 저것만 쓰면 자동으로 row로 맞춰져서 안썼습니다!
 
-<문제 하나 있습니다!!>
-![image](https://user-images.githubusercontent.com/105366292/178193025-537c01eb-4608-4ee8-974d-8c2ff338f5a3.png)
+<2주차 피드백>
+1. hover 했을 때 회색으로 덮어지게 하는 거
+2. 다다일상 기록도 슬라이드 형태로 만들기
+3.버튼들 디자인 바꾸기
 
-여기서 사진이 자동으로 넘어가다가 다 넘어가면 다시 처음 사진 나오게 하고 싶은데
-![image](https://user-images.githubusercontent.com/105366292/178193152-e305cf8a-4fd0-4ed0-adc5-4a5a4699ee5c.png)
+<더 수정한 내용>
+1.이미지들 슬라이드 배너 오류 수정 및 추가
+2. 메인 화면 글씨 추가
 
-이대로 쭉 넘어가서 사진이 없어집니다
+<개선할 점>
+1. hover 했을 때 아래에서 위로 올라오는 애니메이션 형태로 되게 하기
