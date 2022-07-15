@@ -1,0 +1,475 @@
+@font-face {
+    font-family: 'ulsanjunggu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KoPubDotumMedium';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*상자 밖에 큰 상자 하나 더 하고 display: flex 하기
+overflow: hidden
+width:1920px
+margin:outo 하면 알아서 가운데 정렬 됨
+*/
+#header {
+    background-color: rgb(59, 66, 66);
+    height: 25px;
+    color: white;
+    font-size: small;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+#header {text-align: center;}
+
+#nav{
+    display: flex;
+    white-space: nowrap;
+    margin-left: 0.1px;
+    height: 70px;
+}
+#nav:hover{
+    background-color: white;              
+    transition: background 0.5s ease-in-out;
+
+}
+#nav{
+    position: sticky;
+    top: 0;  
+    width: 100%;          
+}
+#nav button {
+    background-color:transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    cursor: pointer;
+}
+.btn_right_menu{
+    margin-top: 20px;
+}
+#nav > button:not(:first-child), .btn_right_menu > button:not(:first-child) {
+    font-size: 18px;
+    padding-left: 25px;
+    font-weight: 500;
+}
+
+#os{
+    font-size: 35px;
+    padding-left: 70px;
+    font-weight: 700;
+    padding-top: 10px;
+    font-family: 'ulsanjunggu';
+}
+    
+#login{
+    font-size: 18px;   
+    padding-left: 800px;         
+}
+
+.outer{
+    width: 100%;
+    height: 520px;
+    margin: 0 auto;
+    overflow-x: hidden;          
+}
+
+/* #cover{
+    width: 100%;
+    height: 460px;     
+    background-color: white;  
+    position: relative;
+    z-index: 3;
+    bottom: 530px;
+} */
+.inner-list {
+    display: flex;
+    transition: .3s ease-out;
+    height: 100%;
+}
+.button-list {
+    text-align: center;
+}
+#os{
+    background-color: none;
+}
+.button-left{
+    right: 700px;
+}
+.button-right{
+    left: 700px;
+}
+.button-left, .button-right{
+    background-color: transparent;
+    border: 0;
+    outline: 0;     
+    font-size: 70px;
+    position: relative;
+    color: rgb(190, 190, 190);
+    font-weight: 100;
+    cursor: pointer;
+    z-index: 1;
+    bottom: 400px;
+}
+#notion{
+    background-color: rgb(240, 240, 240);
+    margin-left: 200px;
+    padding-left: 20px;
+    height: 35px;
+    width: 1100px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+#notion1{
+    color: darkolivegreen;
+    cursor: pointer;
+}
+#notion2{
+    padding-left: 770px;
+    font-size: 23px;
+    color: darkgrey;
+    cursor: pointer;
+}
+#today{
+    margin-left: 190px;
+    color: rgb(29, 29, 29);
+    font-size: 30px;
+    font-family: 'GmarketSansMedium';
+    font-weight: 600;
+
+}
+#summer{
+    margin-left: 25px;
+    width: 120px;            
+}
+#summer, #weekend{
+    margin-left: 8px;
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    height: 35px;
+    cursor: pointer;
+}
+#weekend{
+    width: 140px;
+}
+.product_box{ 
+    margin-left: 200px;
+    height: 400px;
+    width: 1125px;
+    display: flex;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.products{
+    height: 400px;
+    width: 1125px;
+    display: flex;
+    transition: 0.4s ease-out;
+}
+.products > .product_class{
+    margin-left: 15px;
+}
+.pr_bt_left, .pr_bt_right{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    bottom: 300px;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(212, 212, 212);
+    cursor: pointer;
+}
+.pr_bt_left:hover, .pr_bt_right:hover{
+    background-color: black;
+}
+.pr_bt_left{
+    margin-left: 140px;
+    margin-top: 20px;
+}
+.pr_bt_right{
+    margin-left: 1330px;
+    bottom: 335px;
+}
+#new_product{
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: rgb(173, 155, 106);
+    text-align: center;
+    width: 55px;
+    height: 19px;
+}      
+#more_product{
+    margin-left: 650px;
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    background-color: white;
+    height: 45px;
+    width: 180px;
+    cursor: pointer;
+    position: relative;
+    bottom: 100px;
+}
+#more_product_text1{
+    font-family: 'GmarketSansMedium';
+    color: rgb(104, 104, 104);
+    font-size: 13px;
+}
+#more_product_text2{
+    color: rgb(104, 104, 104);
+}
+#gray_box{
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    height: 600px;
+    display: flex;
+    top: 500px;
+    padding-top: 50px;
+}
+#grays{
+    margin-left: 200px;
+    display: flex;
+}
+#gray1{
+    cursor: pointer;
+}
+#gray1_2{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+#sub{
+    margin-left: 200px;
+    margin-top: 70px;
+}
+#sub_text1{
+    font-family: 'KoPubDotumMedium';
+    font-size: 30px;
+}
+#sub_text2{
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    color: rgb(143, 153, 123);
+}
+.sub_imgs{
+    margin-top: 25px;
+    display: flex;
+}
+.sub_img1 > img:hover{
+    filter: brightness(50%);
+    transition: 0.5s ease-in-out;
+}
+.sub_img2 > img:hover{
+    filter: brightness(50%);
+    transition: 0.5s ease-in-out;
+}
+.sub_img3 > img:hover{
+    filter: brightness(50%);
+    transition: 0.5s ease-in-out;
+}
+#sub_button{
+    margin-left: 450px;
+    margin-top: 40px;
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    background-color: white;
+    height: 45px;
+    width: 250px;
+    cursor: pointer;
+}
+#sub_button1{
+    font-size: 14px;
+    color: rgb(54, 54, 54);
+}
+#sub_button2{
+    font-size: 14px;
+    color: rgb(112, 112, 112);
+}
+.record{
+    margin-left: 220px;
+    margin-top: 150px;
+}
+#record_text1{
+    font-family: 'KoPubDotumMedium';
+    font-size: 30px;
+}
+#record_text2{
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    color: rgb(143, 153, 123);
+}
+.record_imgs{
+    margin-top: 50px;
+    width: 1050px;
+    height: 200px;
+    overflow: hidden;   
+}
+.record_box{
+    width: 1050px;
+    height: 200px;
+    display: flex;
+    transition: 0.5s ease-in-out;    
+}
+.record_imgs img{
+    height: 220px; 
+    width:380px;
+}
+.record_img2{
+    margin-left: 15px;
+}
+.rc_bt_left, .rc_bt_right{
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    color: rgb(187, 187, 187);
+    font-size: 37px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 7px;
+    position: relative;
+    display: flex;    
+}
+.rc_bt_left:hover{
+    background-color: black;
+}
+.rc_bt_right:hover{
+    background-color: black;
+}
+.rc_bt_left{
+    bottom: 110px;
+    right: 45px;
+}
+.rc_bt_right{
+    bottom: 155px;
+    left: 1050px;
+}
+#record_bt{
+    margin-left: 450px;
+    margin-top: 40px;
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    background-color: white;
+    height: 45px;
+    width: 250px;
+    cursor: pointer;
+    position: relative;
+    bottom: 100px;
+}
+#record_bt1{
+    font-size: 14px;
+    color: rgb(54, 54, 54);
+}
+#record_bt2{
+    font-size: 14px;
+    color: rgb(112, 112, 112);
+}
+#jeju{
+    position: relative;            
+    margin-top: 100px;
+    margin-left: 20px;
+    text-align: center;
+}
+#jeju_text{
+    position: absolute;
+    bottom: 90px;
+    left: 620px;
+    font-family: 'KoPubDotumMedium';
+    color: white;
+    font-size: 30px;
+}
+#jeju_bt{
+    position: absolute;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 3px;
+    background-color: transparent;
+    height: 28px;
+    width: 100px;
+    cursor: pointer;
+    left: 680px;
+    bottom: 45px;
+    color: white;
+    text-align: center;
+}
+#jeju_bt1{
+    color: rgb(167, 167, 167);
+}
+#last_gray{
+    background-color: rgb(99, 99, 99);
+    height: 55px;
+    width: 300px;
+    margin-top: 55px;
+    padding-left: 1240px;
+    padding-top: 12px;
+}
+#lg_bt1{  /*?????????로그인 버튼 자기혼자 내려가짐*/
+    border: 0;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+#lg_bt2{
+    border: 0;
+    background-color: rgb(66, 66, 66);
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#mun{
+    height: 160px;
+    width: 100%; /*graybox랑 width 똑같이 100% 줬는데 길이 다르게 나옴*/
+    background-color: rgb(247, 247, 247);
+}
+.main_text{
+    position: relative;
+    bottom: 350px;
+    left: 130px;
+    font-size: 35px;
+    font-weight: 550;
+    font-family: 'GmarketSansMedium';
+}
+.main_1_text{
+    position: relative;
+    bottom: 310px;
+    left: 130px;
+    color: black;
+}
+.main_btn{
+    position: relative;
+    bottom: 250px;
+    right: 210px;
+    background-color: transparent;
+    border-radius: 5px;
+    height: 30px;
+    width: 130px;
+    color: black;
+}

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./um.css"/>
+
+
+</head>
+<body>
+    <div id="header">
+        <p >지금 회원가입하면 3천 원 할인 쿠폰 증정</p>
+    </div>
+
+    <div id="main">
+        <div id="nav" style="position: relative; z-index: 2;" onmouseover=paragraph_onmouseover() onmouseout=paragraph_onmouseout()>
+            <button id="os">오설록</button>
+            <button id="product" onmouseover=paragraph_onmouseover1() onmouseout=paragraph_onmouseout1()>제품</button>
+            <button id="present">선물추첨</button>
+            <button id="dada" >다다일삼</button>
+            <button id="brand">브랜드</button>
+            <div class="btn_right_menu">
+                <button id="login">로그인</button>
+                <button id="korean">korean</button>
+            </div>
+        </div>
+        <div class="outer" style="position: relative; top: -70px; z-index: 1;"> <!--메인 화면 사진들-->
+            <div class="inner-list">
+              <div class="inner">
+                <img src="image/main1.jpg" style="width: 100%; ">
+                <span class="main_text">한여름 오후의 리프레시,<br>달콤한 밀크티 레시피<br></span>
+                <span class="main_1_text">오설록의 다양한 블렌디드 티로<br>시원하고 달콤한 냉침 밀크디를 만들어보세요!</span>
+                <button class="main_btn">이벤트 전체보기</button>
+              </div>
+              <div class="inner">
+                <img src="image/main2.png" style="width: 100%;">
+                <span class="main_text">나의 취향 찾기 두 번째,<br>블렌디드 티<br></span>
+                <span class="main_1_text">취향에 맞는 순수차, 찾으셨나요?<br>이번에는 블렌디드 차 취향을 찾아보세요</span>
+                <button class="main_btn">이벤트 전체보기</button>
+              </div>
+              <div class="inner">
+                <img src="image/main3.png" style="width: 100%;">
+                <span class="main_text">7월 출석체크</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- <div id="cover"></div> -->
+
+          <div class="button-list" >
+            <button class="button-left"><</button>
+            <button class="button-right">></button>
+          </div>
+    </div>
+
+    <div id="notion" style="position: relative;"> <!--공지사항-->
+        <span id="notion1">공지사항</span> <span>'숨겨진 티 이벤트' 당첨자 발표</span>
+        <span id="notion2">></span>
+    </div>
+
+    <div class="recommend" style="position: relative;">
+        <div>
+            <span id="today">오늘은 어떤 차를 마셔볼까요?</span>
+            <button id="summer" onclick="change1()">여름맞이 선물</button>
+            <button id="weekend" onclick="change2()">이번 주 인기 제품</button>
+        </div>
+    </div>
+
+    <div class="recommend_product" style="position: relative;">
+        <div class="product_box">
+            <div class="products">
+                <div>
+                    <div class="product_class" id="product1">
+                        <img src="image/product1.png">
+                        <br>
+                        <span>콤부차 피치동백&제주영귤 4입</span><br>
+                        <span>16,000원</span><br><br>
+                        <span id="new_product">신상품</span>
+                    </div>                    
+                </div> <!--얘빼고 스타일 주고 싶어서 자식결합자 쓰고 싶어서 div 한번 더 줌-->
+                <div class="product_class">
+                    <img src="image/product2.png">
+                    <br>
+                    <span>달빛섬 아이스티</span><br>
+                    <span>10,400원</span>
+                </div>
+
+                <div class="product_class">
+                    <img src="image/product3.png">
+                    <br>
+                    <span>찬물녹차 아이스 텀블러 세트</span><br>
+                    <span>9,800원</span><br><br>
+                    <span id="new_product">신상품</span>
+                </div>
+
+                <div class="product_class">
+                    <img src="image/product4.png">
+                    <br>
+                    <span>금빛마중 아이스 텀블러</span><br>
+                    <span>8,500원</span><br><br>
+                    <span id="new_product">신상품</span>
+                </div>
+
+                <div class="product_class">
+                    <img src="image/product5.png">
+                    <br>
+                    <span>티 아이스크림 4입</span><br>
+                    <span>23,500원</span>
+                </div>
+
+                <div class="product_class">
+                    <img src="image/product6.png">
+                    <br>
+                    <span>콤부차 깔라망고 10입</span><br>
+                    <span>8,000원</span>
+                </div>
+                <div class="product_class">
+                    <img src="image/product7.png">
+                    <br>
+                    <span>러블리 티 박스</span><br>
+                    <span>20,000원</span>                  
+                </div>
+                <div class="product_class">
+                    <img src="image/product8.png">
+                    <br>
+                    <span>찬물 루이보스 보리</span><br>
+                    <span>9,500원</span>
+                </div>
+                <div class="product_class">
+                    <img src="image/product9.png">
+                    <br>
+                    <span>삼다 꿀배 티</span><br>
+                    <span>9,500원</span>
+                </div>
+                <div class="product_class">
+                    <img src="image/product10.png">
+                    <br>
+                    <span>산호섬 아이스티</span><br>
+                    <span>13,000원</span>
+                </div>                    
+            </div>
+
+        </div>    
+      
+
+                <button class="pr_bt_left"><</button>
+                <button class="pr_bt_right">></button>            
+            <button id="more_product">
+                <span id="more_product_text1">더 보기</span>
+                <span id="more_product_text2">&nbsp;&nbsp;></span>
+            </button>
+
+    </div>
+
+    <div id="gray_box">
+        <div id="grays">
+            <div id="gray1">
+                <img src="image/gray1.jpg" style="height: 550px;">
+            </div>
+            <div id="gray1_2">
+                <img src="image/gray2.png" style="height: 265px; cursor: pointer;">
+                <img src="image/gray3.jpg" style="height: 265px; cursor: pointer; margin-top: 20px;">
+            </div>
+        </div>
+    </div>
+
+    <div id="sub">
+        <div id="sub_text">
+            <span id="sub_text1">다다일상 구독</span><br><br>
+            <span id="sub_text2">하루 한 번, 나를 만나는 시간을 가져보세요.</span>
+        </div>
+        <div>
+            <div class="sub_imgs">
+                <div class="sub_img1">
+                    <img src="image/sub1.jpg">
+                </div>
+                <div class="sub_img2">
+                    <img src="image/sub2.jpg" style="margin-left: 12px;">
+                </div>
+                <div class="sub_img3"> 
+                    <img src="image/sub3.jpg" style="margin-left: 12px;">
+                </div>
+            </div>
+            <div>
+                <button id="sub_button">
+                    <span id="sub_button1">다다일상 자세히 보기</span>
+                    <span id="sub_button2">&nbsp;></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="record">
+        <div id="record_text">
+            <span id="record_text1">다다일상 기록</span><br><br>
+            <span id="record_text2">차를 통해 달라지는 일상을 만나보세요.</span>
+        </div>
+        <div class="record_imgs">
+            <div class="record_box">
+                <img src="image/record1.jpg">
+
+                <img src="image/record2.jpg" class="record_img2">
+
+                <img src="image/record3.jpg" class="record_img2">
+
+                <img src="image/record4.jpg" class="record_img2">
+
+                <img src="image/record5.jpg" class="record_img2">
+            </div>
+        </div>
+        <button class="rc_bt_left"><</button>
+        <button class="rc_bt_right">></button>
+        <button id="record_bt">
+            <span id="record_bt1">차와 함께하는 삶 더 보기</span>
+            <span id="record_bt2">&nbsp;></span>
+        </button>
+    </div>
+
+    <div id="jeju">
+        <img src="image/jeju.jpg">
+        <span id="jeju_text">제주 티뮤지엄 티스톤</span>
+        <button id="jeju_bt">
+            <span>예약하기</span>
+            <span id="jeju_bt1">></span>
+        </button>
+    </div>
+
+    <div id="last_gray">
+        <button id="lg_bt1">로그인</button>
+        <button id="lg_bt2"></button>
+        <button id="lg_bt2"></button>
+    </div>
+
+    <div id="mun">
+
+    </div>
+    <script>
+        // cover.style.visibility = "hidden";
+
+        summer.style.background="olivedrab";
+        summer.style.color= "white";
+        weekend.style.background="rgb(235, 235, 235)";
+        weekend.style.color= "dimgray";
+
+         function paragraph_onmouseover(){
+         os.style.color="darkslategray";
+         product.style.color="dimgray";
+         dada.style.color="dimgray";
+         present.style.color="dimgray";
+         login.style.color="dimgray";
+         korean.style.color="dimgray";
+         brand.style.color="dimgray";
+ }
+    function paragraph_onmouseout(){
+         os.style.color="white";
+         product.style.color="white";
+         dada.style.color="white";
+         present.style.color="white";
+         login.style.color="white";
+         korean.style.color="white";
+         brand.style.color="white";
+ }
+
+    // function paragraph_onmouseover1()
+    // {          
+    //     cover.style.visibility = "visible"; 
+         
+    // }
+
+    // function paragraph_onmouseout1(){
+    //     cover.style.visibility = "hidden";
+    // }
+
+    function change1()
+        {
+            summer.style.background="olivedrab";
+            summer.style.color= "white";
+            weekend.style.background="rgb(235, 235, 235)";
+            weekend.style.color= "dimgray";
+        }
+
+    function change2()
+        {
+            weekend.style.background="olivedrab";
+            weekend.style.color= "white";
+            summer.style.background="rgb(235, 235, 235)";
+            summer.style.color= "dimgray";
+        }
+
+     /*
+  div사이즈 동적으로 구하기
+*/
+
+const outer = document.querySelector('.outer');
+const innerList = document.querySelector('.inner-list');
+const inners = document.querySelectorAll('.inner');
+let currentIndex = 0; // 현재 슬라이드 화면 인덱스
+
+inners.forEach((inner) => {
+  inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+})
+
+innerList.style.width = `${outer.clientWidth * inners.length}px`; // innerList의 width를 inner의 width * inner의 개수로 만들기
+
+/*
+  버튼에 이벤트 등록하기
+*/
+const buttonLeft = document.querySelector('.button-left');
+const buttonRight = document.querySelector('.button-right');
+
+buttonLeft.addEventListener('click', () => {
+  currentIndex--;
+  currentIndex = currentIndex < 0 ? 0 : currentIndex; // index값이 0보다 작아질 경우 0으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+  clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+
+buttonRight.addEventListener('click', () => {
+  currentIndex++;
+  currentIndex = currentIndex >= inners.length ? inners.length - 1 : currentIndex; // index값이 inner의 총 개수보다 많아질 경우 마지막 인덱스값으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+  clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+
+/*
+  주기적으로 화면 넘기기
+*/
+const getInterval = () => {
+  return setInterval(() => {
+    currentIndex++;
+    currentIndex = currentIndex >= inners.length ? 0 : currentIndex;
+    innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`;
+  }, 3000);
+}
+
+let interval = getInterval(); // interval 등록*/
+
+const product_class= document.querySelector('.product_class');
+const products= document.querySelector('.products');
+const product_box= document.querySelector('.product_box');
+let currentIndex_product = 0; // 현재 슬라이드zxnnkk 화면 인덱스
+
+// inners.forEach((inner) => {
+//   inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+// })
+
+products.style.width = `${product_box.clientWidth * product_class.length}px`; // innerList의 width를 inner의 width * inner의 개수로 만들기
+
+const pr_bt_left = document.querySelector('.pr_bt_left');
+const pr_bt_right = document.querySelector('.pr_bt_right');
+
+pr_bt_right.addEventListener('click', () => {
+  currentIndex_product++;
+  currentIndex_product = currentIndex_product < 0 ? 0 : currentIndex_product; // index값이 0보다 작아질 경우 0으로 변경
+  if(currentIndex_product == 7)
+  {
+    products.style.marginLeft = "0px";
+    currentIndex_product = 0;
+  }
+  else{
+    products.style.marginLeft = `-${255 * currentIndex_product}px`; // index만큼 margin을 주어 옆으로 밀기
+  }
+    clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+
+pr_bt_left.addEventListener('click', () => {
+  currentIndex_product--;
+  if(currentIndex_product == -1)
+  {
+    products.style.marginLeft = `-${255 * 6}px`;
+    currentIndex_product = 6;
+  }
+  else{
+    products.style.marginLeft = `-${255 * currentIndex_product}px`; // index만큼 margin을 주어 옆으로 밀기
+  }
+  clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+
+// const getInterval_product = () => {
+//   return setInterval(() => {
+//     currentIndex_product++;
+//     currentIndex_product = currentIndex_product >= product_class.length ? 0 : currentIndex_product;
+//     product_class.style.marginLeft = `-${product_class.clientWidth * currentIndex_product}px`;
+//   }, 3000);
+// }
+
+// let interval_product = getInterval_product(); /*???????쭉 밀려나짐*/
+
+
+const record_imgs= document.querySelector('.record_imgs');
+const record_box= document.querySelector('.record_box');
+let currentIndex_record = 0; // 현재 슬라이드zxnnkk 화면 인덱스
+
+// inners.forEach((inner) => {
+//   inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+// })
+
+// record_box.style.width = `${record_imgs.clientWidth * reco.length}px`; // innerList의 width를 inner의 width * inner의 개수로 만들기
+
+const rc_bt_left = document.querySelector('.rc_bt_left');
+const rc_bt_right = document.querySelector('.rc_bt_right');
+
+rc_bt_right.addEventListener('click', () => {
+  currentIndex_record++;
+  currentIndex_record = currentIndex_record < 0 ? 0 : currentIndex_record; // index값이 0보다 작아질 경우 0으로 변경
+  if(currentIndex_record == 3)
+  {
+    record_box.style.marginLeft = "0px";
+    currentIndex_record = 0;
+  }
+  else{
+    record_box.style.marginLeft = `-${360 * currentIndex_record}px`; // index만큼 margin을 주어 옆으로 밀기
+  }
+    clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+
+rc_bt_left.addEventListener('click', () => {
+  currentIndex_record--;
+  if(currentIndex_record == -1)
+  {
+    record_box.style.marginLeft = `-${360 * 2}px`;
+    currentIndex_record = 2;
+  }
+  else{
+    record_box.style.marginLeft = `-${360 * currentIndex_record}px`; // index만큼 margin을 주어 옆으로 밀기
+  }
+  clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+    </script>
+</body>
+</html>
