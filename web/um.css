@@ -22,6 +22,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 /*상자 밖에 큰 상자 하나 더 하고 display: flex 하기
 overflow: hidden
 width:1920px
@@ -47,7 +48,6 @@ margin:outo 하면 알아서 가운데 정렬 됨
 #nav:hover{
     background-color: white;              
     transition: background 0.5s ease-in-out;
-
 }
 #nav{
     position: sticky;
@@ -63,13 +63,21 @@ margin:outo 하면 알아서 가운데 정렬 됨
 }
 .btn_right_menu{
     margin-top: 20px;
+    margin-left: 670px;         
+    cursor: pointer;
 }
-#nav > button:not(:first-child), .btn_right_menu > button:not(:first-child) {
+.btn_right_menu button{
+    margin-left: 20px;
+    font-size: 18px;
+}
+#nav > button:not(:first-child){
     font-size: 18px;
     padding-left: 25px;
     font-weight: 500;
 }
-
+.tab-button-nav:hover .search{
+    filter: opacity(0.5) drop-shadow(0 0 0 rgb(0, 0, 0));
+}
 #os{
     font-size: 35px;
     padding-left: 70px;
@@ -80,16 +88,21 @@ margin:outo 하면 알아서 가운데 정렬 됨
     
 #login{
     font-size: 18px;   
-    padding-left: 800px;         
 }
 
 .outer{
     width: 100%;
-    height: 520px;
+    height: 580px;
     margin: 0 auto;
     overflow-x: hidden;          
 }
-
+.inner-list{
+    height: 480px;  
+    margin: 0 auto; 
+}
+.inner{
+    height: 480px;
+}
 /* #cover{
     width: 100%;
     height: 460px;     
@@ -105,15 +118,16 @@ margin:outo 하면 알아서 가운데 정렬 됨
 }
 .button-list {
     text-align: center;
+    position: relative;
 }
 #os{
     background-color: none;
 }
 .button-left{
-    right: 700px;
+    right: 685px;
 }
 .button-right{
-    left: 700px;
+    left: 685px;
 }
 .button-left, .button-right{
     background-color: transparent;
@@ -125,7 +139,7 @@ margin:outo 하면 알아서 가운데 정렬 됨
     font-weight: 100;
     cursor: pointer;
     z-index: 1;
-    bottom: 400px;
+    bottom: 350px;
 }
 #notion{
     background-color: rgb(240, 240, 240);
@@ -264,6 +278,8 @@ margin:outo 하면 알아서 가운데 정렬 됨
 #sub{
     margin-left: 200px;
     margin-top: 70px;
+    height: 580px;
+    overflow: hidden;
 }
 #sub_text1{
     font-family: 'KoPubDotumMedium';
@@ -278,20 +294,94 @@ margin:outo 하면 알아서 가운데 정렬 됨
     margin-top: 25px;
     display: flex;
 }
-.sub_img1 > img:hover{
-    filter: brightness(50%);
-    transition: 0.5s ease-in-out;
+.sub_img1 > img:hover + .sub_img1_text{     
+    transform: translateY(-480px);
+    transition: all 1s ease-in-out; 
 }
-.sub_img2 > img:hover{
-    filter: brightness(50%);
-    transition: 0.5s ease-in-out;
+.sub_img1_text, .sub_img2_text, .sub_img3_text{
+    height: 480px;
+    width: 386px;
+    background-color: rgba(73, 73, 73, 0.4);
+    position: relative;
 }
-.sub_img3 > img:hover{
-    filter: brightness(50%);
-    transition: 0.5s ease-in-out;
+.sub_img2_text, .sub_img3_text{
+    margin-left: 12px;
+}
+.sub_img2 > img:hover + .sub_img2_text{
+    transform: translateY(-480px);  /*한번만 하게 해야 됨*/
+    transition: all 1s ease-in-out; 
+}
+.sub_img3 > img:hover + .sub_img3_text{
+    transform: translateY(-480px);
+    transition: all 1s ease-in-out; 
+}
+.sub_img1, .sub_img2, .sub_img3{
+    display: flex;
+    flex-direction: column;
+}
+.sub_img1_text > div{
+    color: white;
+    font-family: 'KoPubDotumMedium';
+}
+.sub_img1_text > span{
+    color: white;
+    font-family: 'KoPubDotumMedium';
+}
+
+#sit1_1{ 
+    font-size: 25px;     
+    margin-top: 180px;
+    margin-left: 26px; 
+}
+#sit1_2{
+    font-size: 17px;
+    margin-top: 8px;
+    margin-left: 26px; 
+}
+#sit1_3{
+    font-size: 25px;
+}
+#sit1_4{
+    background-color: rgb(218, 221, 20);
+    border-radius: 3px;
+    text-align: center;
+    height: 23px;
+    width: 100px;
+    font-size: 17px;
+    margin-left: 20px;
+}
+#sit1_5{
+    margin-left: 26px;
+    line-height: 23px;
+
+}
+#sit1_5 > span{
+    font-size: 17px;
+}
+/**/
+.sub_img2_text > div{
+    color: white;
+    font-family: 'KoPubDotumMedium';
+}
+.sub_img2_text > span{
+    color: white;
+    font-family: 'KoPubDotumMedium';
+}
+.sub_img3_text > div{
+    color: white;
+    font-family: 'KoPubDotumMedium';
+}
+.sub_img3_text > span{
+    color: white;
+    font-family: 'KoPubDotumMedium';
+}
+#sit3_1{
+    margin-left: 26px;
+    margin-top: 300px;
+    font-size: 25px;  
 }
 #sub_button{
-    margin-left: 450px;
+    margin-left: 650px;
     margin-top: 40px;
     border: 2px solid rgb(211, 211, 211);
     border-radius: 5px;
@@ -361,11 +451,11 @@ margin:outo 하면 알아서 가운데 정렬 됨
 }
 .rc_bt_left{
     bottom: 110px;
-    right: 45px;
+    right: 60px;
 }
 .rc_bt_right{
     bottom: 155px;
-    left: 1050px;
+    left: 1030px;
 }
 #record_bt{
     margin-left: 450px;
@@ -472,4 +562,172 @@ margin:outo 하면 알아서 가운데 정렬 됨
     height: 30px;
     width: 130px;
     color: black;
+}
+#product_nav{
+    height: 70px;
+    display: flex;
+}
+#product_os{
+    font-size: 38px;
+    font-weight: 700;
+    font-family: 'ulsanjunggu';
+    margin-left: 60px;
+}
+#product_nav1{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'GmarketSansMedium';
+}
+#product_nav button{
+    height: 70px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+#product_nav1{
+    margin-left: 40px;
+    color: rgb(59, 59, 59);
+}
+.product_nav2{
+    margin-left: 670px;
+    display: flex;
+}
+.product_nav2 button{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'GmarketSansMedium';
+    color: rgb(59, 59, 59);
+}
+.product_sidebar{
+    margin-left: 60px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: 'GmarketSansMedium';
+    color: rgb(59, 59, 59);
+}
+.product_sidebar1{
+    margin-left: 24px;
+    font-family: 'GmarketSansMedium';
+    color: rgb(59, 59, 59);
+}
+.product_sidebar1 div{
+    margin-top: 30px;
+}
+.product_top div,button{
+    font-family: 'GmarketSansMedium';
+    color: rgb(59, 59, 59);
+    font-size: 15px;
+}
+.product_top{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.product_top > .product_bt{
+    display: flex;
+    margin-left: 750px;
+    margin-bottom: 15px;
+}
+.product_bt button{
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 17px;
+}
+.product_middle{
+    margin-top: 20px;
+    margin-left: 50px;
+    display: flex;
+}
+.product_mid1 span{
+    font-family: 'GmarketSansMedium';
+    font-size: 13px;
+}
+#mid_t1{
+    color: rgb(153, 153, 153);
+}
+#mid_t2{
+    color: rgb(33, 104, 26);
+}
+.product_mid2{
+    margin-left: 580px;
+}
+.product_mid2 button{
+    margin-left: 8px;
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    width: 85px;
+    height: 34px;
+    outline: 0;
+    border: 0;
+    border-radius: 22px;
+    cursor: pointer;
+    color: rgb(156, 156, 156);
+    background-color: rgb(241, 241, 241);
+}
+.present_pic_div{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 12px;
+    padding-top: 15px;
+}
+.present_pics{
+    width: 400px;
+    display: flex;
+    margin-left: 580px;
+    height: 85px;
+}
+.present_main1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.present_main1 img{
+    height: 70px;
+    width: 70px;
+}
+.present_main1 span{
+    font-size: 13px;
+    color: rgb(99, 99, 99);
+}
+.present_recommend{
+    width: 1200px;
+    height: 600px;
+    margin-left: 200px;
+    margin-top: 80px;
+}
+.pre_rec_text1{
+    font-family: 'GmarketSansMedium';
+    font-size: 30px;
+}
+.pre_rec_text2{
+    font-family: 'GmarketSansMedium';
+    font-size: 20px;
+    color: rgb(153, 153, 153);
+}
+.pre_slide{
+    display: flex;
+    margin-left: 750px;
+    height: 20px;
+    margin-top: 45px;
+}
+.pre_slide button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 30px;
+    color: rgb(153, 153, 153);
+}
+#pre_rec_imgs{
+    display: flex;
+    transition: 0.5s ease-in-out;  
+}
+.pre_rec_img_box{
+    overflow: hidden;
+    margin-top: 30px;
+}
+#pre_rec_imgs img:not(.pre_rec_img1 img){
+    margin-left: 15px;
 }

@@ -10,49 +10,59 @@
 
 </head>
 <body>
+ 
     <div id="header">
         <p >지금 회원가입하면 3천 원 할인 쿠폰 증정</p>
     </div>
 
-    <div id="main">
-        <div id="nav" style="position: relative; z-index: 2;" onmouseover=paragraph_onmouseover() onmouseout=paragraph_onmouseout()>
-            <button id="os">오설록</button>
-            <button id="product" onmouseover=paragraph_onmouseover1() onmouseout=paragraph_onmouseout1()>제품</button>
-            <button id="present">선물추첨</button>
+<!--nav 버튼들 섹션2에서는 새로 만들려했는데 새로 만들면 페이지 이동이 안돼서 일단 -->
+        <div id="nav" class="tab-button-nav" style="position: relative; z-index: 3;" onmouseover=paragraph_onmouseover() onmouseout=paragraph_onmouseout()>
+            <button id="os" class="tab-button" data-tab-section="tab-section-1">오설록</button>
+            <button id="product" class="tab-button" data-tab-section="tab-section-2">제품</button>
+            <button id="present" class="tab-button" data-tab-section="tab-section-3">선물추첨</button>
             <button id="dada" >다다일삼</button>
             <button id="brand">브랜드</button>
             <div class="btn_right_menu">
+                <button class="search" onclick="new_window();"><img src="image/search.svg"></button>
                 <button id="login">로그인</button>
                 <button id="korean">korean</button>
             </div>
         </div>
-        <div class="outer" style="position: relative; top: -70px; z-index: 1;"> <!--메인 화면 사진들-->
-            <div class="inner-list">
-              <div class="inner">
-                <img src="image/main1.jpg" style="width: 100%; ">
-                <span class="main_text">한여름 오후의 리프레시,<br>달콤한 밀크티 레시피<br></span>
-                <span class="main_1_text">오설록의 다양한 블렌디드 티로<br>시원하고 달콤한 냉침 밀크디를 만들어보세요!</span>
-                <button class="main_btn">이벤트 전체보기</button>
+        <section id="tab-section-1" class="tab-section">
+       <div id="main">     
+        <div class="outer" style="position: relative; top: -70px; z-index: 2;"> <!--메인 화면 사진들-->
+              <div class="inner-list">
+                <div class="inner">
+                  <img src="image/main1.jpg" style="width: 100%; ">
+                  <span class="main_text">한여름 오후의 리프레시,<br>달콤한 밀크티 레시피<br></span>
+                  <span class="main_1_text">오설록의 다양한 블렌디드 티로<br>시원하고 달콤한 냉침 밀크디를 만들어보세요!</span>
+                  <button class="main_btn">이벤트 전체보기</button>
+                </div>
+                <div class="inner">
+                  <img src="image/main2.png" style="width: 100%;">
+                  <span class="main_text">나의 취향 찾기 두 번째,<br>블렌디드 티<br></span>
+                  <span class="main_1_text">취향에 맞는 순수차, 찾으셨나요?<br>이번에는 블렌디드 차 취향을 찾아보세요</span>
+                  <button class="main_btn">이벤트 전체보기</button>
+                </div>
+                <div class="inner">
+                  <img src="image/main3.png" style="width: 100%;">
+                  <span class="main_text">7월 출석체크</span>
+                </div>
               </div>
-              <div class="inner">
-                <img src="image/main2.png" style="width: 100%;">
-                <span class="main_text">나의 취향 찾기 두 번째,<br>블렌디드 티<br></span>
-                <span class="main_1_text">취향에 맞는 순수차, 찾으셨나요?<br>이번에는 블렌디드 차 취향을 찾아보세요</span>
-                <button class="main_btn">이벤트 전체보기</button>
-              </div>
-              <div class="inner">
-                <img src="image/main3.png" style="width: 100%;">
-                <span class="main_text">7월 출석체크</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- <div id="cover"></div> -->
 
           <div class="button-list" >
-            <button class="button-left"><</button>
-            <button class="button-right">></button>
+            <button class="button-left">
+              <img src="image/main_left.svg">
+            </button>
+            <button class="button-right">
+              <img src="image/main_right.svg">
+            </button>
           </div>
+              
+          </div>
+          
+
+
     </div>
 
     <div id="notion" style="position: relative;"> <!--공지사항-->
@@ -145,8 +155,12 @@
         </div>    
       
 
-                <button class="pr_bt_left"><</button>
-                <button class="pr_bt_right">></button>            
+                <button class="pr_bt_left">
+                  <img src="image/pr_left.svg">
+                </button>
+                <button class="pr_bt_right">
+                  <img src="image/pr_right.svg">
+                </button>            
             <button id="more_product">
                 <span id="more_product_text1">더 보기</span>
                 <span id="more_product_text2">&nbsp;&nbsp;></span>
@@ -171,26 +185,68 @@
             <span id="sub_text1">다다일상 구독</span><br><br>
             <span id="sub_text2">하루 한 번, 나를 만나는 시간을 가져보세요.</span>
         </div>
-        <div>
-            <div class="sub_imgs">
-                <div class="sub_img1">
-                    <img src="image/sub1.jpg">
-                </div>
-                <div class="sub_img2">
-                    <img src="image/sub2.jpg" style="margin-left: 12px;">
-                </div>
-                <div class="sub_img3"> 
-                    <img src="image/sub3.jpg" style="margin-left: 12px;">
-                </div>
+        <div class="sub_imgs">
+            <div class="sub_img1">
+                <img src="image/sub1.jpg">           
+
+                        <div class="sub_img1_text">
+                          <div id="sit1_1">새롭게 만나는 차, 다다일상 베이직</div>
+                          <div style="display: flex; margin-top: 10px;">
+                            <div id="sit1_2">매월</div>
+                            <span id="sit1_3">&nbsp;16,000원</span>   
+                            <div id="sit1_4">배송비&nbsp;Free</div>                 
+                          </div><br>
+                          <hr width = "80%" color = "white"><br>
+                          <div id="sit1_5">
+                            <span>오설록 티 소믈리에가 매월 그달의 테마와 어울리는</span><br>
+                            <span>차들을 선정하여 보내드립니다.<br>
+                            일상의 작은 순간들을 차와 함께 새롭게 만나보세요.<br><br>
+                            -3종류 이상의 다양한 티백 구성<br>
+                            -2만원 이상 정가 구성</span>
+                          </div>
+                        </div>                      
             </div>
-            <div>
+            <div class="sub_img2">
+                <img src="image/sub2.jpg" style="margin-left: 12px;">
+                <div class="sub_img2_text">
+                        <div id="sit1_1">다르게 만나는 차, 다다일상 홈카페</div>
+                        <div style="display: flex; margin-top: 10px;">
+                          <div id="sit1_2">매월</div>
+                          <span id="sit1_3">&nbsp;25,000원</span>   
+                          <div id="sit1_4">배송비&nbsp;Free</div>                 
+                        </div><br>
+                        <hr width = "80%" color = "white"><br>
+                        <div id="sit1_5">
+                          <span>매월 오설록이 티를 이용한 새로운 레시피를 소개해</span><br>
+                          <span>드립니다. 다양한 레시피를 따라하면서 차를<br>
+                          색다르게 경험해보세요.<br><br>
+                          - 3종류 이상의 다양한 티백/티푸드 구성<br>
+                          - 3만 5천원 이상 정가 구성</span>
+                        </div>
+                </div>
+            </div>                      
+            <div class="sub_img3"> 
+                <img src="image/sub3.jpg" style="margin-left: 12px;">
+                <div class="sub_img3_text">
+                            <div id="sit3_1">매일 만나는 차, 정기배송</div>
+                              <div id="sit1_4" style="margin-left: 25px; margin-top: 10px; margin-bottom: 15px;">배송비&nbsp;Free</div>              
+                            <hr width = "80%" color = "white">
+                            <div id="sit1_5" style="margin-top: 15px;">
+                              <span>원하는 차를 집에서 편하게 받아보세요.<br>
+                              오설록과 함께 편안한 티 라이프를 즐겨보세요<br></span>
+                            </div>
+                </div>                  
+            </div>
+        </div>
+
+    </div>        
+          <div>
                 <button id="sub_button">
                     <span id="sub_button1">다다일상 자세히 보기</span>
                     <span id="sub_button2">&nbsp;></span>
                 </button>
-            </div>
         </div>
-    </div>
+
 
     <div class="record">
         <div id="record_text">
@@ -210,8 +266,12 @@
                 <img src="image/record5.jpg" class="record_img2">
             </div>
         </div>
-        <button class="rc_bt_left"><</button>
-        <button class="rc_bt_right">></button>
+        <button class="rc_bt_left">
+          <img src="image/rc_left.svg">
+        </button>
+        <button class="rc_bt_right">
+          <img src="image/rc_right.svg">
+        </button>
         <button id="record_bt">
             <span id="record_bt1">차와 함께하는 삶 더 보기</span>
             <span id="record_bt2">&nbsp;></span>
@@ -236,13 +296,126 @@
     <div id="mun">
 
     </div>
-    <script>
-        // cover.style.visibility = "hidden";
+  </section>
 
+  <section id="tab-section-2" class="tab-section" hidden>
+    <div>
+      <img src="image/product_main.png"  style="width: 100%;">
+    </div>
+
+    <div style="display: flex;">
+          <div class="product_sidebar">
+              <span>제품</span>
+              <div class="product_sidebar1">
+                <div>티 제품</div>
+                <div>티푸드</div>
+                <div>라이프 스타일</div>
+              </div>
+          </div>
+
+          <div class="product_main">
+                  <div class="product_top">
+                    <div>제품</div>
+                    <div class="product_bt">
+                        <button id="product_bt1">리뷰많은순</button>
+                        <button id="product_bt2">리뷰순</button>
+                        <button id="product_bt3">신상품순</button>
+                        <button id="product_bt4">높은 가격순</button>
+                        <button id="product_bt5">낮은 가격순</button>
+                    </div>
+                  </div>
+          <hr style="border: solid 1px rgb(196, 196, 196);; margin-left: 40px;">            
+          
+          <div class="product_middle">
+              <div class="product_mid1">
+                <span id="mid_t1">총&nbsp;</span>
+                <span id="mid_t2">209</span>
+                <span id="mid_t1">개의 상품이 있습니다</span>
+              </div>
+              <div class="product_mid2">
+                <button id="mid_bt_1">전체</button>
+                <button id="mid_bt_2">잎차</button>
+                <button id="mid_bt_3">피라미드</button>
+                <button id="mid_bt_4">티백</button>
+                <button id="mid_bt_5">파우더</button>
+              </div>
+          </div>
+        </div>
+
+  </div>
+  </section>
+
+  <section id="tab-section-3" class="tab-section">
+    <img src="image/present_main.png" style="width:100%">
+    <div class="present_pic_div">
+        <div class="present_pics">
+              <div class="present_main1">
+                <img src="image/present_main1.png">
+                <span>오설록 추천</span>
+              </div>
+              <div class="present_main1">
+                <img src="image/present_main2.png">
+                <span>&nbsp;&nbsp;&nbsp;베스트</span>
+              </div>
+              <div class="present_main1">
+                <img src="image/present_main3.png">
+                <span>여름맞이 선물</span>
+              </div>
+              <div class="present_main1">
+                <img src="image/present_main4.png">
+                <span>부담없는 선물</span>
+              </div>
+        </div>
+    </div>
+    <hr style="border: solid 1px rgb(235, 235, 235); width:100%">
+
+    <div class="present_recommend">
+          <div style="display: flex;">
+               <div>
+                  <div class="pre_rec_text1">오설록 추천</div>
+                  <div class="pre_rec_text2">오설록이 자신있게 추천드리는 제품이에요.</div>
+               </div>
+               <div class="pre_slide">
+                  <button id="pre_slide_1">•</button>
+                  <button id="pre_slide_2">•</button>
+                  <button id="pre_slide_3">•</button>
+               </div>
+          </div>
+
+          <div class="pre_rec_img_box">
+              <div id="pre_rec_imgs">
+                    <div class="pre_rec_img1">
+                      <img src="image/present_recommend_img1.jfif">
+                    </div>
+                    <div class="pre_rec_img2">
+                      <img src="image/present_recommend_img2.jfif">
+                    </div>
+                    <div class="pre_rec_img3">
+                      <img src="image/present_recommend_img3.jfif">
+                    </div>
+                    <div class="pre_rec_img4">
+                      <img src="image/present_recommend_img1.jfif">
+                    </div>
+              </div>
+          </div>
+    </div>
+  </section>
+
+    <script>
+      
         summer.style.background="olivedrab";
         summer.style.color= "white";
         weekend.style.background="rgb(235, 235, 235)";
         weekend.style.color= "dimgray";
+
+        
+        function new_window() {
+        window.open(
+          "search.html",
+          "search",
+          "width=700, height=300, top=200, left=480, toolbar=no"
+        );
+      }
 
          function paragraph_onmouseover(){
          os.style.color="darkslategray";
@@ -262,16 +435,6 @@
          korean.style.color="white";
          brand.style.color="white";
  }
-
-    // function paragraph_onmouseover1()
-    // {          
-    //     cover.style.visibility = "visible"; 
-         
-    // }
-
-    // function paragraph_onmouseout1(){
-    //     cover.style.visibility = "hidden";
-    // }
 
     function change1()
         {
@@ -434,6 +597,164 @@ rc_bt_left.addEventListener('click', () => {
   clearInterval(interval); // 기존 동작되던 interval 제거
   interval = getInterval(); // 새로운 interval 등록
 });
+/*------------------------------------------*/
+const $nav = document.querySelector('.tab-button-nav')
+    const $sections = document.querySelectorAll('.tab-section');
+
+    $nav.addEventListener('click', (e) => {
+      if (!e.target.classList.contains('tab-button')) {
+        return;
+      }
+      
+      const focusedTabId = e.target.dataset.tabSection;
+
+      $sections.forEach(($section) => {
+        if ($section.id === focusedTabId) {
+          $section.removeAttribute('hidden');
+        } else {
+          $section.setAttribute('hidden', true);
+        }
+      });
+    });
+
+    product_bt1.style.color = "olivedrab";
+
+    product_bt1.addEventListener('click', function()
+        {
+            product_bt1.style.color = "olivedrab"; 
+            product_bt2.style.color = "rgb(43, 43, 43)"; 
+            product_bt3.style.color = "rgb(43, 43, 43)"; 
+            product_bt4.style.color = "rgb(43, 43, 43)"; 
+            product_bt5.style.color = "rgb(43, 43, 43)"; 
+        })
+        product_bt2.addEventListener('click', function()
+        {
+            product_bt2.style.color = "olivedrab"; 
+            product_bt1.style.color = "rgb(43, 43, 43)"; 
+            product_bt3.style.color = "rgb(43, 43, 43)"; 
+            product_bt4.style.color = "rgb(43, 43, 43)"; 
+            product_bt5.style.color = "rgb(43, 43, 43)"; 
+        })
+        product_bt3.addEventListener('click', function()
+        {
+            product_bt3.style.color = "olivedrab"; 
+            product_bt2.style.color = "rgb(43, 43, 43)"; 
+            product_bt1.style.color = "rgb(43, 43, 43)"; 
+            product_bt4.style.color = "rgb(43, 43, 43)"; 
+            product_bt5.style.color = "rgb(43, 43, 43)"; 
+        })
+        product_bt4.addEventListener('click', function()
+        {
+            product_bt4.style.color = "olivedrab"; 
+            product_bt2.style.color = "rgb(43, 43, 43)"; 
+            product_bt3.style.color = "rgb(43, 43, 43)"; 
+            product_bt1.style.color = "rgb(43, 43, 43)"; 
+            product_bt5.style.color = "rgb(43, 43, 43)"; 
+        })
+        product_bt5.addEventListener('click', function()
+        {
+            product_bt5.style.color = "olivedrab"; 
+            product_bt2.style.color = "rgb(43, 43, 43)"; 
+            product_bt3.style.color = "rgb(43, 43, 43)"; 
+            product_bt4.style.color = "rgb(43, 43, 43)"; 
+            product_bt1.style.color = "rgb(43, 43, 43)"; 
+        })
+        /*--------------------------*/
+
+      mid_bt_1.style.background = "olivedrab";
+      mid_bt_1.style.color = "white";
+
+      mid_bt_1.addEventListener('click', function()
+        {
+            mid_bt_1.style.background = "olivedrab";
+            mid_bt_1.style.color = "white";
+            mid_bt_2.style.background = "rgb(241, 241, 241)";
+            mid_bt_2.style.color = "rgb(156, 156, 156)";
+            mid_bt_3.style.background = "rgb(241, 241, 241)";
+            mid_bt_3.style.color = "rgb(156, 156, 156)";
+            mid_bt_4.style.background = "rgb(241, 241, 241)";
+            mid_bt_4.style.color = "rgb(156, 156, 156)";
+            mid_bt_5.style.background = "rgb(241, 241, 241)";
+            mid_bt_5.style.color = "rgb(156, 156, 156)";
+        })
+
+        mid_bt_2.addEventListener('click', function()
+        {
+            mid_bt_2.style.background = "olivedrab";
+            mid_bt_2.style.color = "white";
+            mid_bt_1.style.background = "rgb(241, 241, 241)";
+            mid_bt_1.style.color = "rgb(156, 156, 156)";
+            mid_bt_3.style.background = "rgb(241, 241, 241)";
+            mid_bt_3.style.color = "rgb(156, 156, 156)";
+            mid_bt_4.style.background = "rgb(241, 241, 241)";
+            mid_bt_4.style.color = "rgb(156, 156, 156)";
+            mid_bt_5.style.background = "rgb(241, 241, 241)";
+            mid_bt_5.style.color = "rgb(156, 156, 156)";
+        })
+        mid_bt_3.addEventListener('click', function()
+        {
+            mid_bt_3.style.background = "olivedrab";
+            mid_bt_3.style.color = "white";
+            mid_bt_2.style.background = "rgb(241, 241, 241)";
+            mid_bt_2.style.color = "rgb(156, 156, 156)";
+            mid_bt_1.style.background = "rgb(241, 241, 241)";
+            mid_bt_1.style.color = "rgb(156, 156, 156)";
+            mid_bt_4.style.background = "rgb(241, 241, 241)";
+            mid_bt_4.style.color = "rgb(156, 156, 156)";
+            mid_bt_5.style.background = "rgb(241, 241, 241)";
+            mid_bt_5.style.color = "rgb(156, 156, 156)";
+        })
+        mid_bt_4.addEventListener('click', function()
+        {
+            mid_bt_4.style.background = "olivedrab";
+            mid_bt_4.style.color = "white";
+            mid_bt_1.style.background = "rgb(241, 241, 241)";
+            mid_bt_1.style.color = "rgb(156, 156, 156)";
+            mid_bt_3.style.background = "rgb(241, 241, 241)";
+            mid_bt_3.style.color = "rgb(156, 156, 156)";
+            mid_bt_2.style.background = "rgb(241, 241, 241)";
+            mid_bt_2.style.color = "rgb(156, 156, 156)";
+            mid_bt_5.style.background = "rgb(241, 241, 241)";
+            mid_bt_5.style.color = "rgb(156, 156, 156)";
+        })
+        mid_bt_5.addEventListener('click', function()
+        {
+            mid_bt_5.style.background = "olivedrab";
+            mid_bt_5.style.color = "white";
+            mid_bt_1.style.background = "rgb(241, 241, 241)";
+            mid_bt_1.style.color = "rgb(156, 156, 156)";
+            mid_bt_3.style.background = "rgb(241, 241, 241)";
+            mid_bt_3.style.color = "rgb(156, 156, 156)";
+            mid_bt_4.style.background = "rgb(241, 241, 241)";
+            mid_bt_4.style.color = "rgb(156, 156, 156)";
+            mid_bt_2.style.background = "rgb(241, 241, 241)";
+            mid_bt_2.style.color = "rgb(156, 156, 156)";
+        })
+
+        pre_slide_2.addEventListener('click', function()
+        {
+          pre_rec_imgs.style.marginLeft="-600px";
+          pre_slide_2.style.color="rgb(59, 59, 59)";
+          pre_slide_1.style.color="rgb(153, 153, 153)";
+          pre_slide_3.style.color="rgb(153, 153, 153)";
+        })
+
+        pre_slide_3.addEventListener('click', function()
+        {
+          pre_rec_imgs.style.marginLeft="-1200px";
+          pre_slide_3.style.color="rgb(59, 59, 59)";
+          pre_slide_1.style.color="rgb(153, 153, 153)";
+          pre_slide_2.style.color="rgb(153, 153, 153)";
+        })
+
+        pre_slide_1.addEventListener('click', function()
+        {
+          pre_rec_imgs.style.marginLeft="0px";
+          pre_slide_1.style.color="rgb(59, 59, 59)";
+          pre_slide_2.style.color="rgb(153, 153, 153)";
+          pre_slide_3.style.color="rgb(153, 153, 153)";
+        })
+
     </script>
 </body>
 </html>
