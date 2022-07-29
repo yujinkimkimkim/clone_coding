@@ -16,39 +16,39 @@
     </div>
 
 <!--nav 버튼들 섹션2에서는 새로 만들려했는데 새로 만들면 페이지 이동이 안돼서 일단 -->
-        <div id="nav" class="tab-button-nav" style="position: relative; z-index: 3;" onmouseover=paragraph_onmouseover() onmouseout=paragraph_onmouseout()>
-            <button id="os" class="tab-button" data-tab-section="tab-section-1">오설록</button>
-            <button id="product" class="tab-button" data-tab-section="tab-section-2">제품</button>
-            <button id="present" class="tab-button" data-tab-section="tab-section-3">선물추첨</button>
-            <button id="dada" >다다일삼</button>
-            <button id="brand">브랜드</button>
-            <div class="btn_right_menu">
-                <button class="search" onclick="new_window();"><img src="image/search.svg"></button>
-                <button id="login">로그인</button>
-                <button id="korean">korean</button>
-            </div>
-        </div>
-        <section id="tab-section-1" class="tab-section">
-       <div id="main">     
+    <nav class="nav" id="tab-button-nav" style="position: relative; z-index: 3;" onmouseover=paragraph_onmouseover() onmouseout=paragraph_onmouseout()>
+      <button id="os" class="tab-button" data-tab-section="tab-section-1">오설록</button>
+      <button id="product" class="tab-button" data-tab-section="tab-section-2">제품</button>
+      <button id="present" class="tab-button" data-tab-section="tab-section-3">선물추첨</button>
+      <button id="dada" >다다일삼</button>
+      <button id="brand">브랜드</button>
+      <div class="btn_right_menu">
+        <button class="search" onclick="new_window();"><img src="image/search.svg"></button>
+        <button id="login">로그인</button>
+        <button id="korean">korean</button>
+      </div>
+    </nav>
+    <section id="tab-section-1" class="tab-section">
+      <div id="main">     
         <div class="outer" style="position: relative; top: -70px; z-index: 2;"> <!--메인 화면 사진들-->
-              <div class="inner-list">
-                <div class="inner">
-                  <img src="image/main1.jpg" style="width: 100%; ">
-                  <span class="main_text">한여름 오후의 리프레시,<br>달콤한 밀크티 레시피<br></span>
-                  <span class="main_1_text">오설록의 다양한 블렌디드 티로<br>시원하고 달콤한 냉침 밀크디를 만들어보세요!</span>
-                  <button class="main_btn">이벤트 전체보기</button>
-                </div>
-                <div class="inner">
-                  <img src="image/main2.png" style="width: 100%;">
-                  <span class="main_text">나의 취향 찾기 두 번째,<br>블렌디드 티<br></span>
-                  <span class="main_1_text">취향에 맞는 순수차, 찾으셨나요?<br>이번에는 블렌디드 차 취향을 찾아보세요</span>
-                  <button class="main_btn">이벤트 전체보기</button>
-                </div>
-                <div class="inner">
-                  <img src="image/main3.png" style="width: 100%;">
-                  <span class="main_text">7월 출석체크</span>
-                </div>
-              </div>
+          <div class="inner-list">
+            <div class="inner">
+              <img src="image/main1.jpg" style="width: 100%; ">
+              <span class="main_text">한여름 오후의 리프레시,<br>달콤한 밀크티 레시피<br></span>
+              <span class="main_1_text">오설록의 다양한 블렌디드 티로<br>시원하고 달콤한 냉침 밀크디를 만들어보세요!</span>
+              <button class="main_btn">이벤트 전체보기</button>
+            </div>
+            <div class="inner">
+              <img src="image/main2.png" style="width: 100%;">
+              <span class="main_text">나의 취향 찾기 두 번째,<br>블렌디드 티<br></span>
+              <span class="main_1_text">취향에 맞는 순수차, 찾으셨나요?<br>이번에는 블렌디드 차 취향을 찾아보세요</span>
+              <button class="main_btn">이벤트 전체보기</button>
+            </div>
+            <div class="inner">
+              <img src="image/main3.png" style="width: 100%;">
+              <span class="main_text">7월 출석체크</span>
+            </div>
+          </div>
 
           <div class="button-list" >
             <button class="button-left">
@@ -58,19 +58,15 @@
               <img src="image/main_right.svg">
             </button>
           </div>
-              
-          </div>
-          
-
-
-    </div>
+        </div>
+      </div>
 
     <div id="notion" style="position: relative;"> <!--공지사항-->
         <span id="notion1">공지사항</span> <span>'숨겨진 티 이벤트' 당첨자 발표</span>
         <span id="notion2">></span>
     </div>
 
-    <div class="recommend" style="position: relative;">
+    <div class="recommend">
         <div>
             <span id="today">오늘은 어떤 차를 마셔볼까요?</span>
             <button id="summer" onclick="change1()">여름맞이 선물</button>
@@ -78,7 +74,7 @@
         </div>
     </div>
 
-    <div class="recommend_product" style="position: relative;">
+    <div class="recommend_product">
         <div class="product_box">
             <div class="products">
                 <div>
@@ -154,29 +150,64 @@
 
         </div>    
       
-
+        <div style="display:flex;">
                 <button class="pr_bt_left">
                   <img src="image/pr_left.svg">
                 </button>
+                <div style="width: 1125px; height: 1px;"></div>
                 <button class="pr_bt_right">
                   <img src="image/pr_right.svg">
                 </button>            
-            <button id="more_product">
-                <span id="more_product_text1">더 보기</span>
-                <span id="more_product_text2">&nbsp;&nbsp;></span>
-            </button>
+        </div>
 
+
+    </div>
+
+    <div class="mp">
+        <button id="more_product">
+            <span id="more_product_text1">더 보기</span>
+            <span id="more_product_text2">&nbsp;&nbsp;></span>
+        </button>
     </div>
 
     <div id="gray_box">
         <div id="grays">
+
             <div id="gray1">
-                <img src="image/gray1.jpg" style="height: 550px;">
+              <div style="display: flex; margin-top: 20px;">
+                <div id="gray1_t1">오늘만 이 가격</div>
+                <div id="gray1_t2"><img src="image/clock.svg"></div>
+                <div id="clock">clock</div>
+              </div>
+
+              <div id="gray1_2_1">
+                <div id="gray1_2_1_t1">동백꽃이 피는 곶자왈 35g</div>
+                <div id="gray1_2_2">
+                  <div id="gray_1_2_2_t1">30%</div>
+                  <div id="gray_1_2_2_t2">10,500원</div>
+                </div>
+              </div> 
             </div>
-            <div id="gray1_2">
-                <img src="image/gray2.png" style="height: 265px; cursor: pointer;">
-                <img src="image/gray3.jpg" style="height: 265px; cursor: pointer; margin-top: 20px;">
+
+            <div id="gray2">
+                <div id="gray2_img1">
+                  <div id="gray2_t">
+                    <div id="gray2_t1">
+                      7월 출석체크
+                    </div>
+                    <div id="gray2_t2">
+                      07.01-07.31
+                    </div>
+                  </div>  
+                </div>
+                <div id="gray2_img2">
+                  <div id="gray2_2_t">
+                    <div id="gray2_2_t1">TEA FROM JEJU</div>
+                    <div id="gray2_2_t2">오설록 스토리</div>
+                  </div>
+                </div>
             </div>
+
         </div>
     </div>
 
@@ -186,28 +217,47 @@
             <span id="sub_text2">하루 한 번, 나를 만나는 시간을 가져보세요.</span>
         </div>
         <div class="sub_imgs">
+          <div class="sub1">
             <div class="sub_img1">
-                <img src="image/sub1.jpg">           
-
-                        <div class="sub_img1_text">
-                          <div id="sit1_1">새롭게 만나는 차, 다다일상 베이직</div>
-                          <div style="display: flex; margin-top: 10px;">
-                            <div id="sit1_2">매월</div>
-                            <span id="sit1_3">&nbsp;16,000원</span>   
-                            <div id="sit1_4">배송비&nbsp;Free</div>                 
-                          </div><br>
-                          <hr width = "80%" color = "white"><br>
-                          <div id="sit1_5">
-                            <span>오설록 티 소믈리에가 매월 그달의 테마와 어울리는</span><br>
-                            <span>차들을 선정하여 보내드립니다.<br>
-                            일상의 작은 순간들을 차와 함께 새롭게 만나보세요.<br><br>
-                            -3종류 이상의 다양한 티백 구성<br>
-                            -2만원 이상 정가 구성</span>
-                          </div>
-                        </div>                      
+              <div class="sub1_t">
+                <div class="sub1_t1">새롭게 만나는 차, 다다일상 베이직</div>
+                <div class="sub1_t2">
+                  <div id="sit1_22">매월</div>
+                <span id="sit1_3">&nbsp;16,000원</span>   
+                <div id="sit1_4">배송비&nbsp;Free</div>  
+                </div>
+              </div>     
             </div>
-            <div class="sub_img2">
-                <img src="image/sub2.jpg" style="margin-left: 12px;">
+            <div class="sub_img1_text">
+              <div id="sit1_1">새롭게 만나는 차, 다다일상 베이직</div>
+              <div style="display: flex; margin-top: 10px;">
+                <div id="sit1_2">매월</div>
+                <span id="sit1_3">&nbsp;16,000원</span>   
+                <div id="sit1_4">배송비&nbsp;Free</div>                 
+              </div><br>
+              <hr width = "80%" color = "white"><br>
+              <div id="sit1_5">
+                <span>오설록 티 소믈리에가 매월 그달의 테마와 어울리는</span><br>
+                <span>차들을 선정하여 보내드립니다.<br>
+                일상의 작은 순간들을 차와 함께 새롭게 만나보세요.<br><br>
+                -3종류 이상의 다양한 티백 구성<br>
+                -2만원 이상 정가 구성</span>
+              </div>
+            </div>   
+          </div>
+
+          
+            <div class="sub2">
+                <div class="sub_img2">
+                  <div class="sub2_t">
+                    <div class="sub1_t1">다르게 만나는 차, 다다일상 홈카페</div>
+                    <div class="sub1_t2">
+                      <div id="sit1_22">매월</div>
+                    <span id="sit1_3">&nbsp;25,000원</span>   
+                    <div id="sit1_4">배송비&nbsp;Free</div>  
+                    </div>
+                  </div>  
+                </div>
                 <div class="sub_img2_text">
                         <div id="sit1_1">다르게 만나는 차, 다다일상 홈카페</div>
                         <div style="display: flex; margin-top: 10px;">
@@ -224,9 +274,18 @@
                           - 3만 5천원 이상 정가 구성</span>
                         </div>
                 </div>
-            </div>                      
-            <div class="sub_img3"> 
-                <img src="image/sub3.jpg" style="margin-left: 12px;">
+            </div>   
+            
+            
+            <div class="sub3"> 
+                <div class="sub_img3">
+                  <div class="sub3_t">
+                    <div class="sub3_t1">매일 만나는 차, 정기배송</div>
+                    <div class="sub1_t2">  
+                      <div id="sit1_44">배송비&nbsp;Free</div>  
+                    </div>
+                  </div>  
+                </div>
                 <div class="sub_img3_text">
                             <div id="sit3_1">매일 만나는 차, 정기배송</div>
                               <div id="sit1_4" style="margin-left: 25px; margin-top: 10px; margin-bottom: 15px;">배송비&nbsp;Free</div>              
@@ -237,10 +296,11 @@
                             </div>
                 </div>                  
             </div>
+
         </div>
 
     </div>        
-          <div>
+          <div style="margin: auto; width:1182px;">
                 <button id="sub_button">
                     <span id="sub_button1">다다일상 자세히 보기</span>
                     <span id="sub_button2">&nbsp;></span>
@@ -266,35 +326,140 @@
                 <img src="image/record5.jpg" class="record_img2">
             </div>
         </div>
-        <button class="rc_bt_left">
-          <img src="image/rc_left.svg">
-        </button>
-        <button class="rc_bt_right">
-          <img src="image/rc_right.svg">
-        </button>
-        <button id="record_bt">
-            <span id="record_bt1">차와 함께하는 삶 더 보기</span>
-            <span id="record_bt2">&nbsp;></span>
-        </button>
+        
+      <button id="record_bt">
+          <span id="record_bt1">차와 함께하는 삶 더 보기</span>
+          <span id="record_bt2">&nbsp;></span>
+      </button>
     </div>
 
+    <div class="rc_bts">
+      <button class="rc_bt_left">
+        <img src="image/rc_left.svg">
+      </button>
+      <div style="width: 1181px;"></div>
+      <button class="rc_bt_right">
+        <img src="image/rc_right.svg">
+      </button>
+    </div>
+
+
     <div id="jeju">
-        <img src="image/jeju.jpg">
-        <span id="jeju_text">제주 티뮤지엄 티스톤</span>
-        <button id="jeju_bt">
+
+        <div class="jeju_box">
+          <span id="jeju_text">제주 티뮤지엄 티스톤</span>
+          <button id="jeju_bt">
             <span>예약하기</span>
             <span id="jeju_bt1">></span>
-        </button>
+          </button>
+        </div>
     </div>
 
     <div id="last_gray">
+      <div>
         <button id="lg_bt1">로그인</button>
-        <button id="lg_bt2"></button>
-        <button id="lg_bt2"></button>
+        <button id="lg_bt2"><img src="image/facebook.svg"></button>
+        <button id="lg_bt2"><img src="image/instagram.svg"></button>
+      </div>
     </div>
 
-    <div id="mun">
+    <div class="mun">
+      <div style="display: flex; padding-top: 30px;">
+        <div class="mun1">
+          <div class="mun1_1">고객상담센터·주문/배송문의</div>
+          <div class="mun1_2">080-805-5555</div>
+          <div class="mun1_3">평일 09:30-17:00(점심 11:30-13:00)</div>
+        </div>
+        <div class="mun2">
+          <div class="mun1_1">특판, 대량구매 문의</div>
+          <div class="mun2_2">help@osulloc.com</div>
+          <div class="mun1_1">카카오톡ID : osullocmall</div>
+          <div class="mun1_3">평일 09:30-17:00 (점심 11:30-13:00)</div>
+        </div>
+        <div class="mun3">
+          <hr style=" height:13vh;
+          width:.1px;
+          border-width:0;
+          color:rgb(187, 187, 187);
+          background-color:rgb(212, 212, 212);">
+          <div class="mun3_1">
+            <div class="mun3_img">
+              <img src="image/f1.png">
+            </div>
+            <div>매장안내</div>
+          </div>
+          <div class="mun3_1">
+            <div class="mun3_img">
+              <img src="image/f2.png">
+            </div>
+            <div>멤버십혜택</div>
+          </div>
+          <div class="mun3_1">
+            <div class="mun3_img">
+              <img src="image/f3.png">
+            </div>
+            <div>&nbsp;FAQ</div>
+          </div>
+          <div class="mun3_1">
+            <div class="mun3_img">
+              <img src="image/f4.png">
+            </div>
+            <div>1:1문의</div>
+          </div>
+          <div class="mun3_1">
+            <div class="mun3_img">
+              <img src="image/beauti.png">
+            </div>
+            <div>뷰티포인트<br>추후적립</div>
+          </div>
+        </div>
+      </div>  
+    </div>
 
+    <div class="w">
+      <div style="margin-top: 20px;">
+        <img src="image/f_logo.png">
+      </div>
+      <div class="w2">
+        <div class="wm1">
+          <div class="wm1_1">회사소개</div>
+          <hr>
+          <div>서비스 이용약관</div>
+          <hr>
+          <div>개인정보 처리방침</div>
+          <hr>
+          <div>영상정보 처리방침</div>
+          <hr>
+          <div>뷰티포인트</div>
+          <hr>
+          <div>임직원할인</div>
+          <hr>
+          <div>사이트맵</div>
+          <hr>
+          <div>전자공고</div>
+        </div>
+        <div class="wm2">
+          <div class="wm2_1">
+            <div>(주) 오설록</div>
+            <div>대표이사:서혁제 주소:서울특별시 용산구 한강대로 100, 14층(한강로2가) 사업자등록번호: 390-87-01499</div>
+            <div>통신판매업신고번호:2019-서울용산-1173호 호스팅제공자: ㈜오설록</div>
+          </div>
+          <div class="wm2_2">
+            <button>사업자 정보확인></button>
+          </div>
+        </div>
+        <div class="wm3">
+          <div>(주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는 통신판매중개자 이며 통신판매의 당사자가 아닙니다.</div>
+          <div>따라서 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.</div>
+        </div>
+      </div>
+      <div class="w3">
+        <div class="w3_1">(주)이니시스 구매안전서비스</div>
+        <div style="display: flex;">
+          <div><img src="image/escrow_43x43_gray.png"></div>
+          <div class="w3_2">고객님의 안전거래를 위해 현금 거래에 대해<br>이니페이 에스크로서비스를 이용하실 수<br>있습니다.</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -315,7 +480,7 @@
 
           <div class="product_main">
                   <div class="product_top">
-                    <div>제품</div>
+                    <div class="pr_top_bt">제품</div>
                     <div class="product_bt">
                         <button id="product_bt1">리뷰많은순</button>
                         <button id="product_bt2">리뷰순</button>
@@ -345,7 +510,7 @@
   </div>
   </section>
 
-  <section id="tab-section-3" class="tab-section">
+  <section id="tab-section-3" class="tab-section" hidden>
     <img src="image/present_main.png" style="width:100%">
     <div class="present_pic_div">
         <div class="present_pics">
@@ -402,7 +567,22 @@
   </section>
 
     <script>
-      
+      var Target = document.getElementById("clock");
+
+      function clock() {
+            var time = new Date();
+
+
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+
+            Target.innerText = 
+            `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+                
+        }
+        clock();
+        setInterval(clock, 1000); // 1초마다 실행
         summer.style.background="olivedrab";
         summer.style.color= "white";
         weekend.style.background="rgb(235, 235, 235)";
@@ -578,7 +758,7 @@ rc_bt_right.addEventListener('click', () => {
     currentIndex_record = 0;
   }
   else{
-    record_box.style.marginLeft = `-${360 * currentIndex_record}px`; // index만큼 margin을 주어 옆으로 밀기
+    record_box.style.marginLeft = `-${400 * currentIndex_record}px`; // index만큼 margin을 주어 옆으로 밀기
   }
     clearInterval(interval); // 기존 동작되던 interval 제거
   interval = getInterval(); // 새로운 interval 등록
@@ -588,17 +768,17 @@ rc_bt_left.addEventListener('click', () => {
   currentIndex_record--;
   if(currentIndex_record == -1)
   {
-    record_box.style.marginLeft = `-${360 * 2}px`;
+    record_box.style.marginLeft = `-${400 * 2}px`;
     currentIndex_record = 2;
   }
   else{
-    record_box.style.marginLeft = `-${360 * currentIndex_record}px`; // index만큼 margin을 주어 옆으로 밀기
+    record_box.style.marginLeft = `-${400 * currentIndex_record}px`; // index만큼 margin을 주어 옆으로 밀기
   }
   clearInterval(interval); // 기존 동작되던 interval 제거
   interval = getInterval(); // 새로운 interval 등록
 });
 /*------------------------------------------*/
-const $nav = document.querySelector('.tab-button-nav')
+const $nav = document.querySelector('#tab-button-nav')
     const $sections = document.querySelectorAll('.tab-section');
 
     $nav.addEventListener('click', (e) => {
@@ -730,6 +910,10 @@ const $nav = document.querySelector('.tab-button-nav')
             mid_bt_2.style.background = "rgb(241, 241, 241)";
             mid_bt_2.style.color = "rgb(156, 156, 156)";
         })
+
+        pre_slide_1.style.color="rgb(59, 59, 59)";
+          pre_slide_2.style.color="rgb(153, 153, 153)";
+          pre_slide_3.style.color="rgb(153, 153, 153)";
 
         pre_slide_2.addEventListener('click', function()
         {

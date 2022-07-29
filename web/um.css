@@ -22,7 +22,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /*상자 밖에 큰 상자 하나 더 하고 display: flex 하기
 overflow: hidden
 width:1920px
@@ -39,22 +44,22 @@ margin:outo 하면 알아서 가운데 정렬 됨
 
 #header {text-align: center;}
 
-#nav{
+.nav{
     display: flex;
     white-space: nowrap;
     margin-left: 0.1px;
     height: 70px;
 }
-#nav:hover{
+.nav:hover{
     background-color: white;              
     transition: background 0.5s ease-in-out;
 }
-#nav{
+.nav{
     position: sticky;
     top: 0;  
     width: 100%;          
 }
-#nav button {
+.nav button {
     background-color:transparent;
     border: 0;
     outline: 0;
@@ -70,7 +75,7 @@ margin:outo 하면 알아서 가운데 정렬 됨
     margin-left: 20px;
     font-size: 18px;
 }
-#nav > button:not(:first-child){
+.nav > button:not(:first-child){
     font-size: 18px;
     padding-left: 25px;
     font-weight: 500;
@@ -94,7 +99,7 @@ margin:outo 하면 알아서 가운데 정렬 됨
     width: 100%;
     height: 580px;
     margin: 0 auto;
-    overflow-x: hidden;          
+    overflow: hidden;          
 }
 .inner-list{
     height: 480px;  
@@ -119,15 +124,20 @@ margin:outo 하면 알아서 가운데 정렬 됨
 .button-list {
     text-align: center;
     position: relative;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 #os{
     background-color: none;
 }
 .button-left{
-    right: 685px;
+    /* right: 685px; */
+    left: -43vw;
 }
 .button-right{
-    left: 685px;
+    /* left: 685px; */
+    right: -43vw;
 }
 .button-left, .button-right{
     background-color: transparent;
@@ -143,11 +153,12 @@ margin:outo 하면 알아서 가운데 정렬 됨
 }
 #notion{
     background-color: rgb(240, 240, 240);
-    margin-left: 200px;
     padding-left: 20px;
     height: 35px;
     width: 1100px;
     border-radius: 5px;
+    margin: auto;
+    width: fit-content;
     margin-bottom: 20px;
 }
 #notion1{
@@ -160,8 +171,11 @@ margin:outo 하면 알아서 가운데 정렬 됨
     color: darkgrey;
     cursor: pointer;
 }
+.recommend{
+    width: 1103px;
+    margin: auto;
+}
 #today{
-    margin-left: 190px;
     color: rgb(29, 29, 29);
     font-size: 30px;
     font-family: 'GmarketSansMedium';
@@ -185,8 +199,12 @@ margin:outo 하면 알아서 가운데 정렬 됨
 #weekend{
     width: 140px;
 }
+.recommend_product{
+    width: fit-content;
+    margin: auto;
+}
 .product_box{ 
-    margin-left: 200px;
+    margin:auto;
     height: 400px;
     width: 1125px;
     display: flex;
@@ -218,14 +236,7 @@ margin:outo 하면 알아서 가운데 정렬 됨
 .pr_bt_left:hover, .pr_bt_right:hover{
     background-color: black;
 }
-.pr_bt_left{
-    margin-left: 140px;
-    margin-top: 20px;
-}
-.pr_bt_right{
-    margin-left: 1330px;
-    bottom: 335px;
-}
+
 #new_product{
     color: white;
     font-size: 13px;
@@ -234,16 +245,20 @@ margin:outo 하면 알아서 가운데 정렬 됨
     text-align: center;
     width: 55px;
     height: 19px;
-}      
+}    
+.mp{
+    margin: auto;
+    width: fit-content;
+    position: relative;
+    top: -2vw;
+}  
 #more_product{
-    margin-left: 650px;
     border: 2px solid rgb(211, 211, 211);
     border-radius: 5px;
     background-color: white;
-    height: 45px;
-    width: 180px;
+    height: 30px;
+    width: fit-content;
     cursor: pointer;
-    position: relative;
     bottom: 100px;
 }
 #more_product_text1{
@@ -258,32 +273,138 @@ margin:outo 하면 알아서 가운데 정렬 됨
     background-color: rgb(240, 240, 240);
     width: 100%;
     height: 600px;
-    display: flex;
-    top: 500px;
     padding-top: 50px;
 }
 #grays{
-    margin-left: 200px;
+    margin: auto;
+    width: fit-content;
     display: flex;
 }
 #gray1{
     cursor: pointer;
+    height: 550px;
+    width: 500px;
+    background: linear-gradient(
+            rgba(20, 20, 20, 0.2) 8%,
+            rgba(20, 20, 20, 0.1) 15%,
+            rgba(20, 20, 20, 0) 50%,
+            rgba(20, 20, 20, 0.1) 85%,
+            rgba(20, 20, 20, 0.2) 100%
+          ), url('image/gray1.jpg');
+    background-size: cover;
+    background-position: center;      
 }
-#gray1_2{
+#gray1_t1{
+    color: white;
+    font-family: 'GmarketSansMedium';
+    font-size: 30px;
+    margin-left: 30px;
+}
+#gray1_t2{
+    margin-left: 90px;
+    margin-top: 7px;
+}
+#clock{
+    color: white;
+    font-family: 'GmarketSansMedium';
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#gray1_2_1{
+    margin-top: 350px;
+    margin-left: 30px;
+}
+#gray1_2_1_t1{
+    color: white;
+    font-family: 'GmarketSansMedium';
+    font-size: 32px;
+}
+#gray1_2_2{
+    display: flex;
+}
+#gray_1_2_2_t1{
+    background-color: rgb(228, 91, 91);
+    border-radius: 55px;
+    height: 35px;
+    width: 46px;
+    color: white;
+    font-family: 'GmarketSansMedium';
+    font-size: 18px;
+    padding-top: 17px;
+    padding-left: 5px;
+}
+#gray_1_2_2_t2{
+    color: white;
+    font-family: 'GmarketSansMedium';
+    font-size: 22px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+#gray2{
     width: 500px;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 }
+#gray2_img1{
+    background-image: url('image/gray2.png');
+    background-size: cover;
+    background-position: center;
+    height: 265px;
+    cursor: pointer;
+}
+#gray2_t{
+    margin-top: 100px;
+    margin-left: 40px;
+}
+#gray2_t1{
+    font-family: 'GmarketSansMedium';
+    font-size: 22px;
+}
+#gray2_t2{
+    margin-top: 7px;
+    color: dimgray;
+}
+#gray2_img2{
+    background-image: url('image/gray3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 265px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#gray2_2_t{
+    margin-top: 100px;
+    margin-left: 40px;
+}
+#gray2_2_t1{
+    color: rgb(211, 211, 211);
+    font-size: 17px;
+    font-family: 'GmarketSansMedium';
+}
+#gray2_2_t2{
+    font-size: 25px;
+    font-family: 'GmarketSansMedium';
+    color: white;
+}
 #sub{
-    margin-left: 200px;
+    /* margin-left: 200px; */
+    margin: auto;
+    width: fit-content;
     margin-top: 70px;
+    /* margin: 70px auto 0 auto; */
+    /* 상우하좌 */
     height: 580px;
-    overflow: hidden;
+}
+.sub1{
+    display: flex;
+    flex-direction: column;
 }
 #sub_text1{
     font-family: 'KoPubDotumMedium';
     font-size: 30px;
+    color: black;
 }
 #sub_text2{
     font-family: 'GmarketSansMedium';
@@ -293,31 +414,88 @@ margin:outo 하면 알아서 가운데 정렬 됨
 .sub_imgs{
     margin-top: 25px;
     display: flex;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
 }
-.sub_img1 > img:hover + .sub_img1_text{     
+.sub_img1, .sub_img2, .sub_img3{
+    width: 386px;
+    height: 480px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: absolute;
+}
+.sub_img1{
+    background: linear-gradient(
+        rgba(20, 20, 20, 0) 50%,
+        rgba(20, 20, 20, 0.1) 70%,
+        rgba(20, 20, 20, 0.2) 85%,
+        rgba(20, 20, 20, 0.3) 100%
+      ), url('image/sub1.jpg');
+}
+.sub_img2{
+    background: linear-gradient(
+        rgba(20, 20, 20, 0) 50%,
+        rgba(20, 20, 20, 0.1) 70%,
+        rgba(20, 20, 20, 0.2) 85%,
+        rgba(20, 20, 20, 0.3) 100%
+      ), url('image/sub2.jpg');
+}
+.sub_img3{
+    background: linear-gradient(
+        rgba(20, 20, 20, 0) 50%,
+        rgba(20, 20, 20, 0.1) 70%,
+        rgba(20, 20, 20, 0.2) 85%,
+        rgba(20, 20, 20, 0.3) 100%
+      ), url('image/sub3.jpg');
+}
+.sub1_t, .sub2_t, .sub3_t{
+    margin-top: 380px;
+    margin-left: 27px;
+}
+.sub1_t1,  .sub2_t1, .sub3_t1{
+    color: white;
+    font-family: 'GmarketSansMedium';
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.sub1:hover .sub_img1_text{     
     transform: translateY(-480px);
-    transition: all 1s ease-in-out; 
+    transition: all 0.5s ease-in-out; 
+}
+.sub1:hover .sub1_t{
+    visibility: hidden;
+}
+.sub2:hover .sub2_t{
+    visibility: hidden;
+}
+.sub3:hover .sub3_t{
+    visibility: hidden;
 }
 .sub_img1_text, .sub_img2_text, .sub_img3_text{
     height: 480px;
     width: 386px;
-    background-color: rgba(73, 73, 73, 0.4);
+    background-color: rgba(73, 73, 73, 0.8);
     position: relative;
+    top: 480px;
 }
-.sub_img2_text, .sub_img3_text{
+.sub2, .sub3{
     margin-left: 12px;
-}
-.sub_img2 > img:hover + .sub_img2_text{
-    transform: translateY(-480px);  /*한번만 하게 해야 됨*/
-    transition: all 1s ease-in-out; 
-}
-.sub_img3 > img:hover + .sub_img3_text{
-    transform: translateY(-480px);
-    transition: all 1s ease-in-out; 
-}
-.sub_img1, .sub_img2, .sub_img3{
     display: flex;
     flex-direction: column;
+}
+.sub1, .sub2, .sub3{
+    height: 480px;
+    overflow: hidden;
+}
+.sub2:hover .sub_img2_text{
+    transform: translateY(-480px); 
+    transition: all 0.5s ease-in-out; 
+}
+.sub3:hover .sub_img3_text{
+    transform: translateY(-480px);
+    transition: all 0.5s ease-in-out; 
 }
 .sub_img1_text > div{
     color: white;
@@ -327,7 +505,17 @@ margin:outo 하면 알아서 가운데 정렬 됨
     color: white;
     font-family: 'KoPubDotumMedium';
 }
-
+.sub1_t2 > span{
+    color: white;
+    font-family: 'KoPubDotumMedium';
+}
+.sub1_t2 > div{
+    color: white;
+    font-family: 'KoPubDotumMedium';
+}
+.sub1_t2{
+    display: flex;
+}
 #sit1_1{ 
     font-size: 25px;     
     margin-top: 180px;
@@ -335,20 +523,32 @@ margin:outo 하면 알아서 가운데 정렬 됨
 }
 #sit1_2{
     font-size: 17px;
-    margin-top: 8px;
+    margin-top: 4px;
     margin-left: 26px; 
 }
+#sit1_22{
+    font-size: 17px;
+    margin-top: 4px;
+}
 #sit1_3{
-    font-size: 25px;
+    font-size: 22px;
 }
 #sit1_4{
-    background-color: rgb(218, 221, 20);
+    background-color: rgb(188, 190, 46);
     border-radius: 3px;
     text-align: center;
     height: 23px;
     width: 100px;
     font-size: 17px;
-    margin-left: 20px;
+    margin-left: 12px;
+}
+#sit1_44{
+    background-color: rgb(188, 190, 46);
+    border-radius: 3px;
+    text-align: center;
+    height: 23px;
+    width: 100px;
+    font-size: 17px;
 }
 #sit1_5{
     margin-left: 26px;
@@ -381,7 +581,6 @@ margin:outo 하면 알아서 가운데 정렬 됨
     font-size: 25px;  
 }
 #sub_button{
-    margin-left: 650px;
     margin-top: 40px;
     border: 2px solid rgb(211, 211, 211);
     border-radius: 5px;
@@ -389,6 +588,7 @@ margin:outo 하면 알아서 가운데 정렬 됨
     height: 45px;
     width: 250px;
     cursor: pointer;
+    margin-left: 460px;
 }
 #sub_button1{
     font-size: 14px;
@@ -399,12 +599,14 @@ margin:outo 하면 알아서 가운데 정렬 됨
     color: rgb(112, 112, 112);
 }
 .record{
-    margin-left: 220px;
+    margin: auto;
     margin-top: 150px;
+    width: 1181px;
 }
 #record_text1{
     font-family: 'KoPubDotumMedium';
     font-size: 30px;
+    color: black;
 }
 #record_text2{
     font-family: 'GmarketSansMedium';
@@ -413,19 +615,18 @@ margin:outo 하면 알아서 가운데 정렬 됨
 }
 .record_imgs{
     margin-top: 50px;
-    width: 1050px;
+    width: 1181px;
     height: 200px;
     overflow: hidden;   
 }
 .record_box{
-    width: 1050px;
+    width: 1px;
     height: 200px;
     display: flex;
     transition: 0.5s ease-in-out;    
 }
 .record_imgs img{
-    height: 220px; 
-    width:380px;
+    height: 250px; 
 }
 .record_img2{
     margin-left: 15px;
@@ -440,22 +641,20 @@ margin:outo 하면 알아서 가운데 정렬 됨
     height: 45px;
     text-align: center;
     border-radius: 7px;
+    position: relative; 
+}
+.rc_bts{
+    display: flex;
+    margin: auto;
+    width: fit-content;
     position: relative;
-    display: flex;    
+    bottom: 11.5vw;
 }
 .rc_bt_left:hover{
     background-color: black;
 }
 .rc_bt_right:hover{
     background-color: black;
-}
-.rc_bt_left{
-    bottom: 110px;
-    right: 60px;
-}
-.rc_bt_right{
-    bottom: 155px;
-    left: 1030px;
 }
 #record_bt{
     margin-left: 450px;
@@ -467,7 +666,6 @@ margin:outo 하면 알아서 가운데 정렬 됨
     width: 250px;
     cursor: pointer;
     position: relative;
-    bottom: 100px;
 }
 #record_bt1{
     font-size: 14px;
@@ -479,65 +677,195 @@ margin:outo 하면 알아서 가운데 정렬 됨
 }
 #jeju{
     position: relative;            
-    margin-top: 100px;
-    margin-left: 20px;
-    text-align: center;
+    margin: auto;
+    background-image: url(image/jeju.jpg);
+    height: 180px;
+    width: 1200px;
+}
+.jeju_box{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: fit-content;
+    padding-top: 2.8vw;
 }
 #jeju_text{
-    position: absolute;
-    bottom: 90px;
-    left: 620px;
     font-family: 'KoPubDotumMedium';
     color: white;
     font-size: 30px;
 }
 #jeju_bt{
-    position: absolute;
     border: 1px solid rgb(167, 167, 167);
     border-radius: 3px;
     background-color: transparent;
     height: 28px;
     width: 100px;
     cursor: pointer;
-    left: 680px;
-    bottom: 45px;
     color: white;
     text-align: center;
+    margin-left: 70px;
+    margin-top: 23px;
 }
 #jeju_bt1{
     color: rgb(167, 167, 167);
 }
 #last_gray{
-    background-color: rgb(99, 99, 99);
-    height: 55px;
-    width: 300px;
+    background-color: rgb(85, 94, 86);
+    height: 42px;
+    width: 100%;
     margin-top: 55px;
-    padding-left: 1240px;
+    /* padding-left: 1240px; */
     padding-top: 12px;
+    padding-bottom: 10px;
+}
+#last_gray > div {
+    width: fit-content;
+    margin-left: auto;
 }
 #lg_bt1{  /*?????????로그인 버튼 자기혼자 내려가짐*/
     border: 0;
     text-align: center;
     height: 40px;
     width: 100px;
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(54, 54, 54);
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     cursor: pointer;
 }
 #lg_bt2{
     border: 0;
-    background-color: rgb(66, 66, 66);
-    border-radius: 20px;
-    height: 40px;
-    width: 40px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 30px;
+    height: 42px;
+    width: 42px;
     margin-left: 10px;
     cursor: pointer;
 }
-#mun{
+.mun{
     height: 160px;
-    width: 100%; /*graybox랑 width 똑같이 100% 줬는데 길이 다르게 나옴*/
+    width: 100%;
     background-color: rgb(247, 247, 247);
+}
+.mun1{
+    margin-left: 50px;
+}
+.mun1_1{
+    color: rgb(70, 70, 70);
+    font-size: 14px;
+}
+.mun1_2{
+    margin-top: 8px;
+    font-size: 26px;
+    color: rgb(73, 73, 73);
+    font-family: 'GmarketSansMedium';
+}
+.mun1_3{
+    margin-top: 9px;
+    font-size: 13px;
+    color: rgb(70, 70, 70);
+}
+.mun2{
+    margin-left: 70px;
+}
+.mun2_2{
+    font-weight: 600;
+    color: rgb(73, 73, 73);
+    font-size: 16px;
+    text-decoration : underline;
+    text-decoration-color: rgb(73, 73, 73);
+    margin-bottom: 3px;
+}
+.mun3{
+    display: flex;
+    margin-left: 27vw;
+}
+.mun3_1{
+    margin: auto;
+    width: fit-content;
+    margin-left: 45px;
+}
+.mun3_img{
+    margin-left: 15px;
+    margin: auto;
+}
+.mun3_1 > div{
+    text-align: center;
+    width: fit-content;
+}
+.w{
+    margin-top: 30px;
+    margin-left: 80px;
+    display: flex;
+}
+.w2{
+    margin-left: 50px;
+}
+.wm1{
+    display: flex;
+    height: 10px;
+}
+.wm1 hr{
+    height: 0.6em;
+    width:.1px;
+    border-width:0;
+    color:rgb(187, 187, 187);
+    background-color:rgb(121, 121, 121);
+}
+.wm1 div{
+    margin-right: 7px;
+    font-size: 13px;
+    color: rgb(46, 46, 46);
+    margin-top: 5px;
+}
+.wm1 div:not(.wm1_1){
+    margin-left: 5px;
+}
+.wm2{
+    display: flex;
+    margin-top: 23px;
+}
+.wm2_1 div{
+    font-size: 13px;
+    color:  rgb(150, 150, 150);
+    line-height: 23px;
+}
+.wm2_2{
+    margin-left: 15px;
+    margin-top: 18px;
+}
+.wm2_2 button{
+    border-radius: 2px;
+    border-color: rgb(182, 182, 182);
+    background-color: rgb(243, 243, 243);
+    color: rgb(153, 153, 153);
+    font-size: 13px;
+    width: 120px;
+}
+.wm3{
+    margin-top: 15px;
+}
+.wm3 div{
+    color: rgb(150, 150, 150);
+    font-size: 13px;
+    line-height: 20px;
+}
+.w3{
+    margin-left: 320px;
+    width: 310px;
+    height: 100px;
+    border: 1px solid rgb(206, 206, 206);
+    padding-top: 17px;
+    padding-left: 20px;
+}
+.w3_1{
+    color: rgb(54, 54, 54);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.w3_2{
+    color: rgb(99, 99, 99);
+    font-size: 12px;
+    margin-left: 12px;
 }
 .main_text{
     position: relative;
@@ -604,11 +932,13 @@ margin:outo 하면 알아서 가운데 정렬 됨
     font-size: 15px;
     font-family: 'GmarketSansMedium';
     color: rgb(59, 59, 59);
+    width: 140px;
 }
 .product_sidebar1{
     margin-left: 24px;
     font-family: 'GmarketSansMedium';
     color: rgb(59, 59, 59);
+    width: 100px;
 }
 .product_sidebar1 div{
     margin-top: 30px;
@@ -618,6 +948,9 @@ margin:outo 하면 알아서 가운데 정렬 됨
     color: rgb(59, 59, 59);
     font-size: 15px;
 }
+.product_top .pr_top_bt{
+    width: 50px;
+}
 .product_top{
     display: flex;
     margin-top: 30px;
@@ -625,7 +958,7 @@ margin:outo 하면 알아서 가운데 정렬 됨
 }
 .product_top > .product_bt{
     display: flex;
-    margin-left: 750px;
+    margin-left: 50vw;
     margin-bottom: 15px;
 }
 .product_bt button{
@@ -634,12 +967,18 @@ margin:outo 하면 알아서 가운데 정렬 됨
     border: 0;
     height: 16px;
     cursor: pointer;
-    margin-left: 17px;
+    width: 90px;
+}
+#product_bt5{
+    margin-left: 8px;
 }
 .product_middle{
     margin-top: 20px;
     margin-left: 50px;
     display: flex;
+}
+.product_mid1{
+    width: 300px;   
 }
 .product_mid1 span{
     font-family: 'GmarketSansMedium';
@@ -652,13 +991,14 @@ margin:outo 하면 알아서 가운데 정렬 됨
     color: rgb(33, 104, 26);
 }
 .product_mid2{
-    margin-left: 580px;
+    margin-left: 32vw;
+    width: 800px;
 }
 .product_mid2 button{
     margin-left: 8px;
     font-family: 'GmarketSansMedium';
     font-size: 15px;
-    width: 85px;
+    width: fit-content;
     height: 34px;
     outline: 0;
     border: 0;
@@ -667,6 +1007,21 @@ margin:outo 하면 알아서 가운데 정렬 됨
     color: rgb(156, 156, 156);
     background-color: rgb(241, 241, 241);
 }
+#mid_bt_1, #mid_bt_2, #mid_bt_4{
+    padding-left: 1.7vw;
+    padding-right: 1.7vw;
+    width: fit-content;
+}
+#mid_bt_3{
+    padding-left: 1.1vw;
+    padding-right: 1.1vw;
+    width: fit-content;
+}
+#mid_bt_5{
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    width: fit-content;
+}
 .present_pic_div{
     width: 100%;
     height: 100px;
@@ -674,10 +1029,10 @@ margin:outo 하면 알아서 가운데 정렬 됨
     padding-top: 15px;
 }
 .present_pics{
-    width: 400px;
+    width: fit-content;
     display: flex;
-    margin-left: 580px;
     height: 85px;
+    margin: auto;
 }
 .present_main1{
     display: flex;
@@ -694,8 +1049,8 @@ margin:outo 하면 알아서 가운데 정렬 됨
 }
 .present_recommend{
     width: 1200px;
+    margin: auto;
     height: 600px;
-    margin-left: 200px;
     margin-top: 80px;
 }
 .pre_rec_text1{
